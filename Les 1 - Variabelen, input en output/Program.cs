@@ -1,7 +1,5 @@
-var naam = "Leroy";
+Console.Write("Geef je naam in: ");
 
-var voornaam = "Renaud";
+var naam = Console.ReadLine();
 
-var volledigeNaam = $"\"Hallo\"{{}} {voornaam} {naam}!";
-
-Console.WriteLine(volledigeNaam);
+Console.WriteLine($"Hallo {naam}");
