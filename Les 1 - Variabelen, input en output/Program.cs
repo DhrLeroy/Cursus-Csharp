@@ -6,8 +6,6 @@ int verschil = invoer - 2;
 
 
 
-Convert.ToInt
-
 
 
 
