@@ -1,5 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string invoer = Console.ReadLine();
+
+int verschil = invoer - 2;
 
 
-var tekst = Console.ReadLine();
+
+
+
+Convert.ToInt
+
+
+
+
+
+
+
+
