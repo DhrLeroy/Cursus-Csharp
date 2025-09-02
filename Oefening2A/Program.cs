@@ -1,0 +1,1 @@
+﻿// a.	Maak een programma dat 2 getallen aan de gebruiker vraagt en van deze getallen het volgende toont: som, verschil, product, quotiënt.
