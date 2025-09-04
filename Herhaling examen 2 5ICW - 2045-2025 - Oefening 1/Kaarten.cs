@@ -54,12 +54,13 @@ namespace Herhaling_examen_2_5ICW___2045_2025___Oefening_1
 
     public class PokemonMonsterkaart : Pokemonkaart
     {
-        public PokemonMonsterkaart(string naam, int jaartal, string illustrator, string naamSet, int nummerInSet, string omschrijving, int totaalinset, string prevolutie, int hP, EnergyType type, List<Pokemonaanval> aanvallen) : base(naam, jaartal, illustrator, naamSet, nummerInSet, omschrijving, totaalinset)
+        public PokemonMonsterkaart(string naam, int jaartal, string illustrator, string naamSet, int nummerInSet, 
+            string omschrijving, int totaalinset, string prevolutie, int hP, EnergyType type, params Pokemonaanval[] aanvallen) : base(naam, jaartal, illustrator, naamSet, nummerInSet, omschrijving, totaalinset)
         {
             Prevolutie = prevolutie;
             HP = hP;
             Type = type;
-            Aanvallen = aanvallen;
+            Aanvallen = aanvallen.ToList();
         }
 
 
@@ -76,11 +77,11 @@ namespace Herhaling_examen_2_5ICW___2045_2025___Oefening_1
         public List<EnergyType> EnergieKosten { get; set; }
         public string Omschrijving { get; set; }
 
-        public Pokemonaanval(string naam, int schade, List<EnergyType> energieKosten, string omschrijving)
+        public Pokemonaanval(string naam, int schade, string omschrijving, params EnergyType[] energieKosten)
         {
             Naam = naam;
             Schade = schade;
-            EnergieKosten = energieKosten;
+            EnergieKosten = energieKosten.ToList();
             Omschrijving = omschrijving;
         }
     }
