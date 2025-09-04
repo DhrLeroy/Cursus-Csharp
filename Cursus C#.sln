@@ -79,6 +79,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOefening1C", "TestOefen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOefening1D", "TestOefening1D\TestOefening1D.csproj", "{DEDA409A-BC27-4A91-AC09-22A34872628E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOefening1E", "TestOefening1E\TestOefening1E.csproj", "{2C370575-9FAE-4CF1-BE92-858F844C1F00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{DEDA409A-BC27-4A91-AC09-22A34872628E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEDA409A-BC27-4A91-AC09-22A34872628E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEDA409A-BC27-4A91-AC09-22A34872628E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C370575-9FAE-4CF1-BE92-858F844C1F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C370575-9FAE-4CF1-BE92-858F844C1F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C370575-9FAE-4CF1-BE92-858F844C1F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C370575-9FAE-4CF1-BE92-858F844C1F00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -213,6 +219,7 @@ Global
 		{06440DFB-CC99-4774-BA1B-3C8A658113E7} = {8573327E-2954-48ED-B1E0-2F19FD61B8B8}
 		{A1F0B234-0E85-4F08-A06F-3ECAB4C9E73E} = {0CD67F2B-5D0F-475B-882C-2FD8C4EF3AD6}
 		{DEDA409A-BC27-4A91-AC09-22A34872628E} = {D7B5C1A8-0179-4C69-B954-2225417FAF0F}
+		{2C370575-9FAE-4CF1-BE92-858F844C1F00} = {4B9A7945-20BF-4237-84B7-12CA06256DA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}

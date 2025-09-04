@@ -6,7 +6,7 @@
         [TestMethod]
         public void TestHelloJohn()
         {
-            TestHelper.HelperMethods.AssertOutputs(System.Reflection.Assembly.GetExecutingAssembly().GetName().Name, "Hallo John!");
+            TestHelper.HelperMethods.AssertOutputs("Hallo John!");
         }
     }
 }

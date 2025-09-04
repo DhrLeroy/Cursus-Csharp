@@ -6,7 +6,7 @@
         [TestMethod]
         public void TestJohnTheLastofUs()
         {
-            TestHelper.HelperMethods.AssertOutputs(System.Reflection.Assembly.GetExecutingAssembly().GetName().Name, "John speelt graag The Last of Us!");
+            TestHelper.HelperMethods.AssertOutputs("John speelt graag The Last of Us!");
         }
     }
 }

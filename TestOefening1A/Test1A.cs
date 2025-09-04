@@ -8,7 +8,7 @@ namespace TestOefening1A
         [TestMethod]
         public void TestHelloWorld()
         {
-            TestHelper.HelperMethods.AssertOutputs(System.Reflection.Assembly.GetExecutingAssembly().GetName().Name, "Hello world!");
+            TestHelper.HelperMethods.AssertOutputs("Hello world!");
         }
     }
 }
