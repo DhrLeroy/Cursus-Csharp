@@ -16,9 +16,7 @@ namespace TestHelper
 
             try
             {
-                // Act: invoke the top-level statements
-                // Top-level statements in .NET 6+ generate a hidden Program.Main method.
-                var assembly = Assembly.Load(Assembly.GetCallingAssembly().GetName().Name.Substring(4)); // replace with your assembly name
+                var assembly = Assembly.Load(Assembly.GetCallingAssembly().GetName().Name.Substring(4)); 
                 var entryPoint = assembly.EntryPoint;
                 entryPoint.Invoke(null, entryPoint.GetParameters().Length == 0 ? null : new object[] { Array.Empty<string>() });
 
