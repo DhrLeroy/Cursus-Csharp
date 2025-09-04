@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oplossing1F", "Oplossingen1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oplossing1G", "Oplossing1G\Oplossing1G.csproj", "{257E87F5-0B1F-4B4E-AC31-083A6F440D92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herhaling examen 2 5ICW - 2024-2025 - Oefening 2", "Herhaling examen 2 5ICW - 2024-2025 - Oefening 2\Herhaling examen 2 5ICW - 2024-2025 - Oefening 2.csproj", "{BD998F62-B268-4BCC-B1D7-9672948C00CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -203,6 +205,10 @@ Global
 		{257E87F5-0B1F-4B4E-AC31-083A6F440D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{257E87F5-0B1F-4B4E-AC31-083A6F440D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{257E87F5-0B1F-4B4E-AC31-083A6F440D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD998F62-B268-4BCC-B1D7-9672948C00CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD998F62-B268-4BCC-B1D7-9672948C00CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD998F62-B268-4BCC-B1D7-9672948C00CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD998F62-B268-4BCC-B1D7-9672948C00CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -248,6 +254,7 @@ Global
 		{35E542E6-992E-4415-B806-9B9389743FAD} = {82FA5B75-7A18-4800-AD14-CF49907FE12A}
 		{71459B00-1BE3-4A37-8CA9-F7AF55347460} = {82FA5B75-7A18-4800-AD14-CF49907FE12A}
 		{257E87F5-0B1F-4B4E-AC31-083A6F440D92} = {561F84CC-F05E-4F7C-B861-C2B7F6849330}
+		{BD998F62-B268-4BCC-B1D7-9672948C00CF} = {7A99F4E2-0720-4105-9DFA-28D2349E91B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}
