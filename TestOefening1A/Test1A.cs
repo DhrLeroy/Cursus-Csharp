@@ -3,7 +3,7 @@
 namespace TestOefening1A
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class Test1A
     {
         [TestMethod]
         public void TestHelloWorld()

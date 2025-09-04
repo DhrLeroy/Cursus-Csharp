@@ -5,8 +5,11 @@ namespace TestHelper
 {
     public static class HelperMethods
     {
-        public static void AssertOutputs(string assemblyName, string expected)
+        public static void AssertOutputs(string assemblyName, string expected, params string[] input)
         {
+            var inputString = new StringReader(string.Join("\n", input));
+            Console.SetIn(inputString);
+
             var sw = new StringWriter();
             var originalOut = Console.Out;
             Console.SetOut(sw);
@@ -21,7 +24,7 @@ namespace TestHelper
 
                 // Assert
                 var output = sw.ToString();
-                StringAssert.Contains(output, expected);
+                StringAssert.Contains(output.Trim(), expected.Trim());
             }
             finally
             {
