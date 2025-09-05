@@ -16,7 +16,8 @@ namespace TestHelper
 
             try
             {
-                var assembly = Assembly.Load(Assembly.GetCallingAssembly().GetName().Name.Substring(4)); 
+                var assemblyName = Assembly.GetCallingAssembly().GetName().Name;
+                var assembly = Assembly.Load(assemblyName.Substring(4)); 
                 var entryPoint = assembly.EntryPoint;
                 entryPoint.Invoke(null, entryPoint.GetParameters().Length == 0 ? null : new object[] { Array.Empty<string>() });
 

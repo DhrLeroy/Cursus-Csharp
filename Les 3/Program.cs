@@ -17,7 +17,11 @@ foreach(var i in nummers)
     Console.WriteLine(i);
 }
 
-for(var i = 0; i < 3; i++)
+for(var i = 1; i <= 3; i++)
 {
-    Console.WriteLine(nummers[i]);
+    Console.Write($"Geef getal {i} in: ");
+    list.Add(Convert.ToInt32(Console.ReadLine()));
 }
+
+foreach(var i in list)
+    { Console.WriteLine(i); }
