@@ -5,4 +5,3 @@ Console.WriteLine();
 
 //  tijdens typen Ctrl+spatie     : aanvullen
 
-Console.WriteLine
