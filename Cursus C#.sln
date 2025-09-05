@@ -97,6 +97,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oefening 2A", "Oefening 2A"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oplossing2A", "Oplossing2A\Oplossing2A.csproj", "{43FA6C70-6154-4786-946D-423F4F312A43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOefening1G", "TestOefening1G\TestOefening1G.csproj", "{6231E052-A031-44F5-B891-6ECA8812D2E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,6 +225,10 @@ Global
 		{43FA6C70-6154-4786-946D-423F4F312A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FA6C70-6154-4786-946D-423F4F312A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FA6C70-6154-4786-946D-423F4F312A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6231E052-A031-44F5-B891-6ECA8812D2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6231E052-A031-44F5-B891-6ECA8812D2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6231E052-A031-44F5-B891-6ECA8812D2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6231E052-A031-44F5-B891-6ECA8812D2E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -272,6 +278,7 @@ Global
 		{40A6D971-06EF-4C47-B3F3-3B71FA85B97A} = {7DEEB9D1-EA8E-4EE6-8EEA-9D3CDFFF7341}
 		{7DEEB9D1-EA8E-4EE6-8EEA-9D3CDFFF7341} = {C8330FA7-5039-4A21-8F94-988DB1C14083}
 		{43FA6C70-6154-4786-946D-423F4F312A43} = {7DEEB9D1-EA8E-4EE6-8EEA-9D3CDFFF7341}
+		{6231E052-A031-44F5-B891-6ECA8812D2E2} = {561F84CC-F05E-4F7C-B861-C2B7F6849330}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}
