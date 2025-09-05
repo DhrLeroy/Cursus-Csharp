@@ -16,5 +16,5 @@ List<Pokemonkaart> pokemonkaarten = kaarten.OfType<Pokemonkaart>().ToList();
 
 foreach(var k in pokemonkaarten)
 {
-    Console.WriteLine(k.Naam);
+    Console.WriteLine($"{k.Naam} ({k.NummerInSet}:{k.TotaalInSet})");
 }
