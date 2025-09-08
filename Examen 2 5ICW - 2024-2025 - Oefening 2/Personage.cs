@@ -15,6 +15,8 @@ namespace LINQ_Games.Klassen
         public string SpecialeKracht { get; set; }
         public bool IsSpeelbaar { get; set; }
 
+        public List<Game> Games { get; set; }
+
         public Personage(string naam, string rol, string beschrijving, int leeftijd, string specialeKracht, bool isSpeelbaar)
         {
             Naam = naam;
