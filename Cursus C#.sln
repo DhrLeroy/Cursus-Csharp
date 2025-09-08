@@ -161,6 +161,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oplossing3C", "Oplossing3C\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOefening3C", "TestOefening3C\TestOefening3C.csproj", "{D42CCA75-3765-441E-A375-51D0512D74C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen 2 5ICW - 2024-2025 - Oefening 2", "Examen 2 5ICW - 2024-2025 - Oefening 2\Examen 2 5ICW - 2024-2025 - Oefening 2.csproj", "{71BF0990-CABB-4B36-8E11-2FA3808C1B70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -379,6 +381,10 @@ Global
 		{D42CCA75-3765-441E-A375-51D0512D74C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D42CCA75-3765-441E-A375-51D0512D74C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D42CCA75-3765-441E-A375-51D0512D74C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BF0990-CABB-4B36-8E11-2FA3808C1B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BF0990-CABB-4B36-8E11-2FA3808C1B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BF0990-CABB-4B36-8E11-2FA3808C1B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BF0990-CABB-4B36-8E11-2FA3808C1B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -460,6 +466,7 @@ Global
 		{E55AC065-8AC8-47A1-9BDD-D531AEA36532} = {D7365CED-5E18-4315-BE63-D5015333D909}
 		{6B105515-D55C-4A0E-9D41-CB90922D0D3E} = {D7365CED-5E18-4315-BE63-D5015333D909}
 		{D42CCA75-3765-441E-A375-51D0512D74C2} = {D7365CED-5E18-4315-BE63-D5015333D909}
+		{71BF0990-CABB-4B36-8E11-2FA3808C1B70} = {CB29DC03-C1AC-4377-AC51-43451BB01E97}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}

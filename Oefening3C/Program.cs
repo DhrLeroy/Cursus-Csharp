@@ -10,3 +10,6 @@ Jouw huisdieren zijn: Shiro George Zazu
 
 */
 
+
+List<string> x = new List<string>();
+x.Insert
