@@ -9,3 +9,11 @@ Gemaskeerd: H***O
 
 
 Console.WriteLine();
+
+string wachtwoord = "MyVerySecurePassword123!";
+string input;
+do
+{
+    Console.Write("Geef het wachtwoord in: ");
+    input = Console.ReadLine();
+} while (wachtwoord != input);
