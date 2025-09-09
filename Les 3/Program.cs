@@ -1,4 +1,55 @@
-﻿int[] nummers = new int[3];
+﻿
+/*int[] nummers = new int[3];
+
+nummers[0] = 5;
+nummers[1] = 6;
+nummers[2] = 7;
+Array.Resize(ref nummers, 4);
+
+List<int> nummersList = new List<int>();
+nummersList.Add(5);
+nummersList.Add(6);
+nummersList.Add(5);
+nummersList.Remove(5);
+nummersList.Insert(0, 4);
+nummersList.RemoveAt(2);
+
+foreach(int nummer in nummersList)
+{
+    Console.WriteLine(nummer);
+}
+
+for(int i = 0; i < 3; i++)
+{
+
+}
+
+Console.WriteLine();*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*int[] nummers = new int[3];
 
 nummers[0] = 1;
 nummers[1] = 2;
@@ -24,4 +75,4 @@ for(var i = 1; i <= 3; i++)
 }
 
 foreach(var i in list)
-    { Console.WriteLine(i); }
+    { Console.WriteLine(i); }*/
