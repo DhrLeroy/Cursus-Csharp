@@ -1,5 +1,5 @@
 ﻿
-/*int[] nummers = new int[3];
+int[] nummers = new int[3];
 
 nummers[0] = 5;
 nummers[1] = 6;
@@ -21,10 +21,22 @@ foreach(int nummer in nummersList)
 
 for(int i = 0; i < 3; i++)
 {
-
+    Console.WriteLine(i);
 }
 
-Console.WriteLine();*/
+
+
+for(int i = 0; i < nummers.Length; i++)
+{
+    Console.WriteLine(nummers[i]);
+}
+foreach(int getal in nummers)
+{
+    Console.WriteLine(getal);
+}
+
+
+Console.WriteLine();
 
 
 
