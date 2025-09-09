@@ -14,22 +14,31 @@ nummersList.Remove(5);
 nummersList.Insert(0, 4);
 nummersList.RemoveAt(2);
 
+Console.WriteLine("Overloop lijst nummers:");
 foreach(int nummer in nummersList)
 {
     Console.WriteLine(nummer);
 }
 
+Console.WriteLine("Getallen van 0 tot 3 (niet t.e.m.)");
 for(int i = 0; i < 3; i++)
 {
     Console.WriteLine(i);
 }
 
+Console.WriteLine("Getallen tot 5:");
+for(int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
 
 
+Console.WriteLine("Overloop array met for: ");
 for(int i = 0; i < nummers.Length; i++)
 {
     Console.WriteLine(nummers[i]);
 }
+Console.WriteLine("Overloop array met foreach:");
 foreach(int getal in nummers)
 {
     Console.WriteLine(getal);
