@@ -14,7 +14,7 @@
             TestHelper.HelperMethods.AssertOutputs("E-mailadres: E-mailadres heeft geen geldig einde\r\nE-mailadres: E-mailadres gevalideerd", "hello@world.c", "hello@world.com");
         }
         [TestMethod]
-        public void Testhelloatworlddotc()
+        public void Testhellworldcom()
         {
             TestHelper.HelperMethods.AssertOutputs("E-mailadres: E-mailadres heeft geen geldig einde\r\nE-mailadres: E-mailadres gevalideerd", "hello@world.c", "hello@world.com");
         }

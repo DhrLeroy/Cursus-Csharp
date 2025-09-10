@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vraag_2__Videogames.Klassen;
 
 namespace LINQ_Games.Klassen
 {
