@@ -1,38 +1,5 @@
 ﻿
-List<int> nummersList = new List<int>();
-nummersList.Add(5);
-nummersList.Add(6);
-nummersList.Add(5);
 
-for(int i = 0; i < nummersList.Count; i++)
-{
-    nummersList.RemoveAt(i);
-    i--;
-}
-
-Console.WriteLine();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-for(int i = 0; i < nummersList.Count; i++)
-{
-    nummersList.RemoveAt(i);
-    i--;
-}
-
-Console.WriteLine();
 
 /*
 int[] nummers = new int[3];
