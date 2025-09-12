@@ -1,4 +1,80 @@
-﻿string tekst = "ABcdefa";
+﻿string tekst = "ik speel graag videoGame";
+
+var woorden = tekst.Split(" ");
+for(int i = 0; i < woorden.Length; i++)
+{
+    woorden[i] = woorden[i].Substring(0, 1).ToUpper() + woorden[i].Substring(1);
+}
+
+string alles_woorden_met_hoofdletter = string.Join(" ", woorden);
+Console.WriteLine(alles_woorden_met_hoofdletter);
+
+var tekst_zonder_iI = tekst.Replace("i", "1", StringComparison.CurrentCultureIgnoreCase);
+
+
+var x = string.Join(", ", tekst.Split(" "));
+
+var tekst_zonder_witruimtes_voor_of_na = tekst.Trim();
+
+var alles_kleine_letters = tekst.ToLower();
+var alles_hoofdletters = tekst.ToUpper();
+
+var eerste_woord = tekst.Substring(0, tekst.IndexOf(" "));
+var tweede_woord = tekst.Substring(tekst.IndexOf(" ")+1, 
+    tekst.IndexOf(" ", tekst.IndexOf(" ")) - tekst.IndexOf(" ")+1);
+
+tweede_woord = tekst.Split(" ")[1];
+
+//var woorden = tekst.Split(" ");
+
+foreach(var woord in woorden)
+    Console.WriteLine(woord);
+
+
+tekst = tekst.Insert(0, "Weetje: ");
+
+
+tekst.LastIndexOf("g", StringComparison.CurrentCultureIgnoreCase);
+
+tekst.IndexOf("Speel", StringComparison.CurrentCultureIgnoreCase);
+
+string code = "CDFABDJFFCAKJFDE";
+
+int positie_van_eerste_a = code.IndexOf("A", StringComparison.CurrentCultureIgnoreCase);
+int positie_van_tweede_a = code.IndexOf("A", code.IndexOf("A")+1);
+
+bool is_gelijk = tekst.Equals("Ik speel graag videogame", StringComparison.CurrentCultureIgnoreCase);
+
+
+bool eindigt_op_Game = tekst.EndsWith("Game", StringComparison.CurrentCultureIgnoreCase);
+bool begint_met_ik = tekst.StartsWith("ik", StringComparison.CurrentCultureIgnoreCase);
+
+
+int aantal_tekens = tekst.Count();
+
+
+bool bevat_a = tekst.Contains("Videogame", StringComparison.CurrentCultureIgnoreCase);
+
+Console.WriteLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*string tekst = "ABcdefa";
 
 
 bool zit_b_in_tekst = tekst.Contains("b", StringComparison.CurrentCultureIgnoreCase);
@@ -56,3 +132,4 @@ string zonder_spaties = lange_tekst.Replace("\n", "");
 Console.WriteLine(zonder_spaties);
 
 
+*/
