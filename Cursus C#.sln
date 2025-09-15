@@ -275,6 +275,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oplossing3G", "Oplossing3G\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOefening3G", "TestOefening3G\TestOefening3G.csproj", "{EE6C3276-D1CD-497E-B6AA-134A1D9505F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les 12 - Databanken (geavanceerd)", "Les 12 - Databanken (geavanceerd)\Les 12 - Databanken (geavanceerd).csproj", "{B1B1D5BE-571A-4DC8-8384-02C9F18947D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -665,6 +667,10 @@ Global
 		{EE6C3276-D1CD-497E-B6AA-134A1D9505F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE6C3276-D1CD-497E-B6AA-134A1D9505F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE6C3276-D1CD-497E-B6AA-134A1D9505F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B1D5BE-571A-4DC8-8384-02C9F18947D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B1D5BE-571A-4DC8-8384-02C9F18947D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B1D5BE-571A-4DC8-8384-02C9F18947D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B1D5BE-571A-4DC8-8384-02C9F18947D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -803,6 +809,7 @@ Global
 		{31689737-39E4-4EFC-A2C1-8138FC302011} = {B124D06C-6ABD-4A9D-A405-64564628FF57}
 		{DF65A145-D149-476E-A31F-7BA0CD0E9573} = {B124D06C-6ABD-4A9D-A405-64564628FF57}
 		{EE6C3276-D1CD-497E-B6AA-134A1D9505F3} = {B124D06C-6ABD-4A9D-A405-64564628FF57}
+		{B1B1D5BE-571A-4DC8-8384-02C9F18947D3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}
