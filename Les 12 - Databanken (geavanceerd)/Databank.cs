@@ -21,7 +21,6 @@ namespace Les_12___Databanken__geavanceerd_
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-                .
         }
     }
 }
