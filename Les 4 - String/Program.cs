@@ -25,7 +25,7 @@ tweede_woord = woorden[1];
 
 bool gelijk_abcdef = tekst.Equals("abcdef", StringComparison.CurrentCultureIgnoreCase);
 
-bool start_met_a = tekst.StartsWith("a", System.StringComparison.CurrentCultureIgnoreCase);
+bool start_met_a = tekst.StartsWith("ab", System.StringComparison.CurrentCultureIgnoreCase);
 bool eindigt_op_f = tekst.EndsWith("F", StringComparison.CurrentCultureIgnoreCase);
 
 bool bevat_CD = tekst.Contains("CD", StringComparison.CurrentCultureIgnoreCase);
