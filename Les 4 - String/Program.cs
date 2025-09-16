@@ -1,4 +1,69 @@
-﻿string tekst = "ik speel graag videoGame";
+﻿string tekst = "\t\tDeze les is leuk.       ";
+
+string tekst_zonder_begineind_spaties = tekst.Trim();
+
+string tekst_kleine_letters = tekst.ToLower();
+string tekst_hoofdletters = tekst.ToUpper();
+
+string tekst_zonder_a = tekst.Replace("a", "y", StringComparison.CurrentCultureIgnoreCase);
+
+var woorden = tekst.Split(" ");
+string terug_de_zin = string.Join(" ", woorden);
+
+string metXOpEinde = tekst.Insert(tekst.Length, "X");
+string metXInBegin = tekst.Insert(0, "X");
+
+
+int laatste_positie_spatie = tekst.LastIndexOf(" ");
+
+int eerst_positie_spatie = tekst.IndexOf(" ");
+string tweede_woord = tekst.Substring(eerst_positie_spatie+1);
+tweede_woord = tweede_woord.Substring(0, tweede_woord.IndexOf(" "));
+tweede_woord = tekst.Substring(eerst_positie_spatie + 1, tekst.IndexOf(" ", tekst.IndexOf(" ") + 1) - eerst_positie_spatie-1);
+tweede_woord = woorden[1];
+
+
+bool gelijk_abcdef = tekst.Equals("abcdef", StringComparison.CurrentCultureIgnoreCase);
+
+bool start_met_a = tekst.StartsWith("a", System.StringComparison.CurrentCultureIgnoreCase);
+bool eindigt_op_f = tekst.EndsWith("F", StringComparison.CurrentCultureIgnoreCase);
+
+bool bevat_CD = tekst.Contains("CD", StringComparison.CurrentCultureIgnoreCase);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*string tekst = "ik speel graag videoGame";
 
 var woorden = tekst.Split(" ");
 for(int i = 0; i < woorden.Length; i++)
@@ -56,7 +121,7 @@ int aantal_tekens = tekst.Count();
 bool bevat_a = tekst.Contains("Videogame", StringComparison.CurrentCultureIgnoreCase);
 
 Console.WriteLine();
-
+*/
 
 
 
