@@ -1,39 +1,30 @@
-﻿int nummer = 3;
+﻿/*Console.Write("Getal: ");
 
-bool waar = true;
+var getal = Convert.ToInt32(Console.ReadLine()); 
 
-if (nummer > 0)
+if (getal > 0)
+    Console.WriteLine("+");
+else if(getal < 0)
+    Console.WriteLine("-");
+else
+    Console.WriteLine("allebei ");
+*/
+
+string email = Console.ReadLine();
+if (!email.Contains("@"))
 {
-    Console.WriteLine("positief");
+ Console.WriteLine("Geen @-teken");
 }
 
 
 
-string tekst = "abc";
+string password = "ABC";
+string input = "";
 
-if (tekst.Contains("b"))
-{
-    Console.WriteLine("bevat b");
-}
-
-if(tekst.StartsWith("A", StringComparison.CurrentCultureIgnoreCase))
-{
-    Console.WriteLine("begint met A");
-}
-if (tekst.EndsWith("C", StringComparison.CurrentCultureIgnoreCase))
-{
-    Console.WriteLine("eindigt met C");
-}
-
-
-
-
-
-
-string wachtwoord = "MyVerySecurePassword123!";
-string input="";
 do
 {
-    Console.Write("Geef het wachtwoord in: ");
+    Console.Write("Wachtwoord: ");
     input = Console.ReadLine();
-} while (wachtwoord != input);
+} while (password != input);
+
+Console.WriteLine($"Ingelogd");
