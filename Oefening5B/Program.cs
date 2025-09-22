@@ -13,37 +13,3 @@
  Beste optie: Pizzeria Don Corleone voor 312,5 euro.
  */
 
-Console.Write("Aantal pizza: ");
-var aantal = Convert.ToInt32(Console.ReadLine());
-Console.Write("Kilometer: ");
-var km = Convert.ToSingle(Console.ReadLine());
-
-var scpizza = aantal * 13.0;
-if (aantal >= 50)
-    scpizza = scpizza * 0.8;
-else if (aantal >= 20)
-    scpizza = scpizza * 0.9;
-scpizza = scpizza + km * 0.8;
-
-var dcpizza = aantal * 12.5;
-
-string beste_pizza = "";
-var beste_prijs = 0.0;
-
-if (scpizza > dcpizza)
-{
-    beste_pizza = "Pizzeria Don Corleone";
-    beste_prijs = dcpizza;
-}
-else if (dcpizza > scpizza)
-{
-    beste_pizza = "Pizzeria Scaletta";
-    beste_prijs = scpizza;
-}
-else
-{
-    beste_pizza = "allebei hetzelfde";
-    beste_prijs = dcpizza;
-}
-
-Console.WriteLine($"Beste optie: {beste_pizza} voor {beste_prijs} euro.");
