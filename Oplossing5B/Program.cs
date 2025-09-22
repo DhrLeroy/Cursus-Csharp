@@ -19,9 +19,9 @@ Console.Write("Kilometer: ");
 var km = Convert.ToSingle(Console.ReadLine());
 
 var scpizza = aantal * 13.0;
-if (scpizza >= 50)
+if (aantal >= 50)
     scpizza = scpizza * 0.8;
-else if (scpizza >= 20)
+else if (aantal >= 20)
     scpizza = scpizza * 0.9;
 scpizza = scpizza + km * 0.8;
 
@@ -32,5 +32,17 @@ var beste_prijs = 0.0;
 
 if (scpizza > dcpizza)
 {
-    Console.WriteLine($"Beste optie: {}");
+    beste_pizza = "Pizzeria Don Corleone";
+    beste_prijs = dcpizza;
+}else if(dcpizza > scpizza)
+{
+    beste_pizza = "Pizzeria Scaletta";
+    beste_prijs = scpizza;
 }
+else
+{
+    beste_pizza = "allebei hetzelfde";
+    beste_prijs = dcpizza;
+}
+
+Console.WriteLine($"Beste optie: {beste_pizza} voor {beste_prijs} euro.");

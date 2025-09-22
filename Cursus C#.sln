@@ -317,6 +317,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oefening 4J", "Oefening 4J"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening 4J", "Oefening 4J\Oefening 4J.csproj", "{5D516EBF-D204-4C33-A9D0-21FC1D73B64E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console applicatie (oef 12_1)", "Console applicatie (oef 12_1)\Console applicatie (oef 12_1).csproj", "{4F8286C1-CAEE-4C9B-B0E4-CB51A69CC8C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -739,6 +741,10 @@ Global
 		{5D516EBF-D204-4C33-A9D0-21FC1D73B64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D516EBF-D204-4C33-A9D0-21FC1D73B64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D516EBF-D204-4C33-A9D0-21FC1D73B64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F8286C1-CAEE-4C9B-B0E4-CB51A69CC8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8286C1-CAEE-4C9B-B0E4-CB51A69CC8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8286C1-CAEE-4C9B-B0E4-CB51A69CC8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8286C1-CAEE-4C9B-B0E4-CB51A69CC8C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -898,6 +904,7 @@ Global
 		{8E828EAC-27A7-4630-87B3-FFD4BE9850CB} = {BD2266FA-C1A4-437C-84F0-C8561AF574D2}
 		{E9078CA9-DCB1-42B2-A2BA-136B2C9A95CC} = {7FDD3422-7C33-42C2-A6B3-CA195328681A}
 		{5D516EBF-D204-4C33-A9D0-21FC1D73B64E} = {E9078CA9-DCB1-42B2-A2BA-136B2C9A95CC}
+		{4F8286C1-CAEE-4C9B-B0E4-CB51A69CC8C5} = {EA40890D-6870-4E1B-8374-A4FDF3C8F916}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}

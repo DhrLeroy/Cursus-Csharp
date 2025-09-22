@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MySql;
 
@@ -10,9 +11,11 @@ using MySql;
 namespace MySql.Migrations
 {
     [DbContext(typeof(Databank))]
-    partial class DatabankModelSnapshot : ModelSnapshot
+    [Migration("20250922080426_prijs")]
+    partial class prijs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,8 +59,7 @@ namespace MySql.Migrations
 
                     b.Property<string>("Naam")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("longtext");
 
                     b.Property<float?>("Prijs")
                         .HasPrecision(2)
@@ -117,34 +119,6 @@ namespace MySql.Migrations
                     b.Navigation("Game");
 
                     b.Navigation("Gebruiker");
-                });
-
-            modelBuilder.Entity("_12_1_Classes.Product.Merchandise", b =>
-                {
-                    b.OwnsOne("_12_1_Classes.Product.Afmeting", "Afmeting", b1 =>
-                        {
-                            b1.Property<int>("MerchandiseId")
-                                .HasColumnType("int");
-
-                            b1.Property<float>("Breedte")
-                                .HasColumnType("float");
-
-                            b1.Property<float>("Diepte")
-                                .HasColumnType("float");
-
-                            b1.Property<float>("Lengte")
-                                .HasColumnType("float");
-
-                            b1.HasKey("MerchandiseId");
-
-                            b1.ToTable("Merch");
-
-                            b1.WithOwner()
-                                .HasForeignKey("MerchandiseId");
-                        });
-
-                    b.Navigation("Afmeting")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("_12_1_Classes.Gebruiker", b =>

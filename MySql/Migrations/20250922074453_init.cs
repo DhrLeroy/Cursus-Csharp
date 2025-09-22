@@ -5,11 +5,33 @@
 namespace MySql.Migrations
 {
     /// <inheritdoc />
-    public partial class aankopen : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterDatabase()
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Games",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    Prijs = table.Column<float>(type: "float", nullable: false),
+                    Naam = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Genre = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Rating = table.Column<int>(type: "int", nullable: false),
+                    Console = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Games", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateTable(
                 name: "Gebruiker",
                 columns: table => new
@@ -20,6 +42,23 @@ namespace MySql.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Gebruiker", x => x.Username);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Merch",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    Prijs = table.Column<float>(type: "float", nullable: false),
+                    Naam = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Soort = table.Column<int>(type: "int", nullable: false),
+                    Gewicht = table.Column<float>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Merch", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -38,7 +77,7 @@ namespace MySql.Migrations
                         name: "FK_Aankoop_Games_GameId",
                         column: x => x.GameId,
                         principalTable: "Games",
-                        principalColumn: "GameId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Aankoop_Gebruiker_Username",
@@ -60,6 +99,12 @@ namespace MySql.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Aankoop");
+
+            migrationBuilder.DropTable(
+                name: "Merch");
+
+            migrationBuilder.DropTable(
+                name: "Games");
 
             migrationBuilder.DropTable(
                 name: "Gebruiker");
