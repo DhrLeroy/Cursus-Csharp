@@ -8,6 +8,7 @@ namespace _12_1_Classes.Product
 {
     public enum Soort
     {
+        Pennenzak,
         Knuffel,
         Standbeeld,
         Kledij

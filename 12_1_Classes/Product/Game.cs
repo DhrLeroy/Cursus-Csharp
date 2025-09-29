@@ -16,6 +16,7 @@ namespace _12_1_Classes.Product
     {
         public string Genre { get; set; }
         public int Rating { get; set; }
+        public DateOnly Releasedatum { get; set; }
         public Console Console { get; set; }
         public List<Aankoop>? Licenties { get; set; }
     }

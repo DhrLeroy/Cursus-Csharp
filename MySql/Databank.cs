@@ -36,6 +36,13 @@ namespace MySql
 
             modelBuilder.Entity<Product>().Property(p => p.Naam).HasMaxLength(100).IsRequired();
 
+            modelBuilder.Entity<Merchandise>().Property(m => m.Soort)
+                .HasConversion(s => s.ToString(),
+                               s => (Soort)Enum.Parse(typeof(Soort), s));
+
+            modelBuilder.Entity<Game>().Property(g => g.Releasedatum)
+                .HasConversion(d => d.ToString("dd-MM-yyyy"), d => DateOnly.Parse(d));
+
             modelBuilder.Entity<Merchandise>().OwnsOne(m => m.Afmeting);
         }
     }
