@@ -1,29 +1,27 @@
 ﻿/*
- Gegeven
-Indien men een bal vanop een bepaalde hoogte laat vallen dan stuitert die totdat deze uiteindelijk stil komt te liggen.
+Heb je je ooit afgevraagd hoe dicht je van een blikseminslag verwijderd was na het zien van de flits of 
+het horen van het gedonder?
 
+Je kan dit vrij gemakkelijk uitrekenen door het aantal seconden te tellen tussen de bliksemflits en het gedonder. 
+Bij een blikseminslag zien we meteen de bliksemflits omdat de snelheid van het licht zeer groot is 
+(ongeveer 300 000 km per seconde). 
+Gelijktijd ontstaat het gedonder, 
+maar omdat de snelheid van het geluid veel trager is (ongeveer 343 m per seconde) horen we dit gedonder pas veel later.
 
-Voor verschillende soorten ballen geldt een restitutiecoëfficiënt. 
-Dit is een kommagetal tussen 0 en 1 dat aangeeft hoe ver de bal terugbotst. 
-Een waarde van 1 betekent dat de bal perfect terugbotst terwijl 0 betekent dat de bal meteen tot rust komt.
+Schrijf een programma dat het aantal seconden tussen bliksemflits en gedonder vraagt en vervolgens de afstand van jezelf tot de blikseminslag berekent. 
+Deze afstand wordt in km op het scherm afgedrukt en afgerond op 3 cijfers na de komma.
 
-Het volgende verband bestaat tussen c, de hoogte Hi en de hoogte Hi+1 na 1 keer botsen.
+Bij een negatief aantal seconden, toon je een foutboodschap.
 
-c = vierkantswortel(Hi+1/Hi)
- 
-Gevraagd
-Schrijf een programma dat in volgorde de beginhoogte (in cm) van de bal en de restitutiecoëfficiënt vraagt. Vervolgens wordt afgedrukt na hoeveel botsingen de bal minder dan 1 cm boven de grond komt.
+ Voorbeeld
 
-Na elke botsing geef je de hoogte van de bal weer, deze hoogte rond je af op 1 decimaal.
+Aantal seconden tussen bliksem en donder: 2
+De blikseminslag was 0.686 km van je verwijderd.
 
-Voorbeeld
-Bij een starthoogte van 100.0 cm en een restitutiecoëfficient van 0.7 verschijnt er:
+Aantal seconden tussen bliksem en donder: 4
+De blikseminslag was 1.372 km van je verwijderd.
 
-Na 1 botsing is de hoogte nog 49.0 cm.
-Na 2 botsingen is de hoogte nog 24.0 cm.
-Na 3 botsingen is de hoogte nog 11.8 cm.
-Na 4 botsingen is de hoogte nog 5.8 cm.
-Na 5 botsingen is de hoogte nog 2.8 cm.
-Na 6 botsingen is de hoogte nog 1.4 cm.
-Na 7 botsingen is de hoogte nog 0.7 cm.
+Aantal seconden tussen bliksem en donder: -1
+Donder kan niet voor bliksem komen.
+
  */
