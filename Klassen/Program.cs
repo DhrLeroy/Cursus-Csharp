@@ -1,16 +1,28 @@
-﻿string leerling1Naam = "Bert";
-int leerling1Leeftijd = 65;
+﻿using Klassen;
 
-string leerling2Naam = "Ernie";
-int leerling2Leeftijd = 55;
+List<Leerling> leerlingen = new List<Leerling>();
 
-string leerling3Naam = "Bonnie";
-int leerling3Leeftijd = 29;
+/*for(int i = 0; i < 2; i++)
+{
+    Leerling l = new Leerling();
+    Console.Write("Naam: ");
+    l.Voornaam = Console.ReadLine();
+    Console.Write("Leeftijd: ");
+    l.Leeftijd = Convert.ToInt32(Console.ReadLine());
+    leerlingen.Add(l);
+}*/
 
-string leerling4Naam = "Clyde";
-int leerling4Leeftijd = 30;
 
-Console.WriteLine($"{leerling1Naam}: {leerling1Leeftijd} jaar");
-Console.WriteLine($"{leerling2Naam}: {leerling2Leeftijd} jaar");
-Console.WriteLine($"{leerling3Naam}: {leerling3Leeftijd} jaar");
-Console.WriteLine($"{leerling4Naam}: {leerling4Leeftijd} jaar");
+
+
+var leerling1 = new Leerling("Muppet", "Bert", 65);
+leerlingen.Add(leerling1);
+
+var leerling2 = new Leerling("Muppet", "Ernie", 55);
+leerlingen.Add(leerling2);
+
+
+foreach (var leerling in leerlingen)
+{
+    Console.WriteLine($"{leerling.Voornaam}: {leerling.Leeftijd} jaar");
+}
