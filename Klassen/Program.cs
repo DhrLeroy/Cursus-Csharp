@@ -2,6 +2,10 @@
 
 List<Leerling> leerlingen = new List<Leerling>();
 
+Toets wiskunde_cirkel = new Toets();
+wiskunde_cirkel.Naam = "Eigenschappen van een cirkel";
+wiskunde_cirkel.VulScoreIn(20);
+
 /*for(int i = 0; i < 2; i++)
 {
     Leerling l = new Leerling();

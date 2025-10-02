@@ -1,0 +1,10 @@
+﻿@page
+@model MyGamingWebsite.Pages.Games.MyIndexModel
+@{
+    <h1>@Model.Titel</h1>
+    <ul>
+        @foreach(var game in Model.MyGames){
+            <li>@game.Titel (@game.Rating/10)</li>
+        }
+    </ul>
+}

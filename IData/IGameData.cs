@@ -10,5 +10,6 @@ namespace IData
     public interface IGameData
     {
         void AddGame(Game newgame);
+        List<Game> GeefAlleGames();
     }
 }

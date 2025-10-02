@@ -1,6 +1,15 @@
+using IData;
+using ILogic;
+using Logic;
+using MyGaming_MySQL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IGameLogic, GameLogic>();
+builder.Services.AddScoped<IGameData, MySQLDatabase>();
+builder.Services.AddScoped<MySQLDatabase>();
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

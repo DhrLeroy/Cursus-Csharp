@@ -10,5 +10,6 @@ namespace ILogic
     public interface IGameLogic
     {
         void AddGame(Game newgame);
+        List<Game> GeefAlleGames();
     }
 }

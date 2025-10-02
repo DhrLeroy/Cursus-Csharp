@@ -14,6 +14,11 @@ namespace MyGaming_MySQL
             SaveChanges();
         }
 
+        public List<Game> GeefAlleGames()
+        {
+            return Games.ToList();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(Environment.GetEnvironmentVariable("MyGamingDb", EnvironmentVariableTarget.User),

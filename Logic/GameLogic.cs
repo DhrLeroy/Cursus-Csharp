@@ -22,5 +22,10 @@ namespace Logic
         {
             gameRepository.AddGame(newgame);
         }
+
+        public List<Game> GeefAlleGames()
+        {
+            return gameRepository.GeefAlleGames();
+        }
     }
 }
