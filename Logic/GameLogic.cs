@@ -20,12 +20,16 @@ namespace Logic
 
         public void AddGame(Game newgame)
         {
+            if (string.IsNullOrWhiteSpace(newgame.Titel))
+            {
+                throw new ArgumentException("Titel mag niet leeg zijn.");
+            }
             gameRepository.AddGame(newgame);
         }
 
-        public List<Game> GeefAlleGames()
+        public List<Game> GeefAlleGames(int? leeftijd)
         {
-            return gameRepository.GeefAlleGames();
+             return gameRepository.GeefAlleGames().Where(g => !leeftijd.HasValue || g.MinimumLeeftijd <= leeftijd.Value).ToList();
         }
     }
 }

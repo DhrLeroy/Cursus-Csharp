@@ -19,7 +19,7 @@ namespace MyGamingWebsite.Pages.Games
         public void OnGet()
         {
             Titel = "My games";
-            MyGames = logic.GeefAlleGames();
+            MyGames = logic.GeefAlleGames(null);
         }
     }
 }

@@ -25,5 +25,14 @@ namespace MyGaming_MySQL
                 new MySqlServerVersion(new Version(8,2,0)));
             base.OnConfiguring(optionsBuilder);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+
+            modelBuilder.Entity<Game>().Property(g => g.Genre)
+                .HasConversion(g => g.ToString(), g => (Genre)Enum.Parse(typeof(Genre), g));
+        }
     }
 }

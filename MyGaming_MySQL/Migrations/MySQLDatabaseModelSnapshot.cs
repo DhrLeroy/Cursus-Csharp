@@ -29,6 +29,13 @@ namespace MySQL.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("MinimumLeeftijd")
+                        .HasColumnType("int");
+
                     b.Property<float>("Rating")
                         .HasColumnType("float");
 
