@@ -5,6 +5,8 @@ Dier spin = new Dier("George","Kruisspin");
 Dier dumbo = new Dier("Dumbo", "Olifant");
 Dier olli = new Dier("Olli", "Olifant");
 
+Dier shiro = new Dier("Shiro", "Kat");
+
 string label_olli = olli.GeefLabel();
 
 int jaar = 2025;
