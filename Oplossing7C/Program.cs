@@ -1,0 +1,20 @@
+﻿using Oplossing7C;
+
+var v1 = new Vergelijking(2, 3, 4);
+v1.ToonVergelijking();
+var v2 = new Vergelijking(-2, 3, 4);
+v2.ToonVergelijking();
+var v3 = new Vergelijking(0, 3, 4);
+v3.ToonVergelijking();
+var v4 = new Vergelijking(2, -3, 4);
+v4.ToonVergelijking();
+var v5 = new Vergelijking(2, 0, 4);
+v5.ToonVergelijking();
+var v6 = new Vergelijking(2, 3, -4);
+v6.ToonVergelijking();
+var v7 = new Vergelijking(2, 3, 0);
+v7.ToonVergelijking(); 
+var v8 = new Vergelijking(0, 0, 4);
+v8.ToonVergelijking();
+var v9 = new Vergelijking(0, 0, -4);
+v9.ToonVergelijking();
