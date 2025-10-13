@@ -21,10 +21,15 @@ namespace MyGamingDeviceApp
 
 #if DEBUG
     		builder.Logging.AddDebug();
+            builder.Services.AddScoped<IGameLogic, MockingGameLogic>();
 #endif
 
-            builder.Services.AddScoped<IGameLogic, GameLogic>();
+#if (!DEBUG)
+            builder.Services.AddScoped<IGameLogic,GameLogic>();
             builder.Services.AddScoped<IGameData, MySQLDatabase>();
+#endif
+
+
 
             return builder.Build();
         }

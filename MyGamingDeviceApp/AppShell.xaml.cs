@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            Routing.RegisterRoute(nameof(Pages.Games.GameDetail), typeof(Pages.Games.GameDetail));
+            //Routing.RegisterRoute(nameof(Pages.Games.GameDetail), typeof(Pages.Games.GameDetail));
         }
     }
 }

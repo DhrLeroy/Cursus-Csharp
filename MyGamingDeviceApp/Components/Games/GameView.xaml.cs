@@ -13,10 +13,10 @@ public partial class GameView : ContentView
 
 	private async void OnTapped(object sender, TappedEventArgs e)
 	{
-		if(BindingContext is Game game)
+		/*if(BindingContext is Game game)
 		{
 			await Shell.Current.GoToAsync(nameof(Pages.Games.GameDetail),
 				new Dictionary<string, object> { { nameof(GameDetail.Game), game } });
-		}
+		}*/
 	}
 }
