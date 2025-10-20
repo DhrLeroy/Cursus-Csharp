@@ -1,4 +1,5 @@
 using ILogic;
+using MyGamingDeviceApp.Pages.Games.Views;
 
 namespace MyGamingDeviceApp.Pages.Games;
 
@@ -14,12 +15,9 @@ public class GameIndex : ContentPage
 
 		foreach(var game in logic.GeefAlleGames(null))
 		{
-			layout.Add(new Label() { Text = game.Titel });
-		}
+            layout.Add(new GameView(game));
+        }
 
-		Content = new VerticalStackLayout
-		{
-			Children = {layout}
-		};
+		Content = layout;
 	}
 }

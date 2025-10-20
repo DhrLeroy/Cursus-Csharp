@@ -72,14 +72,4 @@
 	  <ProjectReference Include="..\MyGaming_MySQL\MySQL.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <MauiXaml Update="Components\Games\GameView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Pages\Games\ViewModels\" />
-	</ItemGroup>
-
 </Project>

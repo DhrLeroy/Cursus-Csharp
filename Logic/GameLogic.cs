@@ -31,5 +31,10 @@ namespace Logic
         {
              return gameRepository.GeefAlleGames().Where(g => !leeftijd.HasValue || g.MinimumLeeftijd <= leeftijd.Value).ToList();
         }
+
+        public List<Game> GeefFavorieteGames()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

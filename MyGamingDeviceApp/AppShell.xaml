@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate games:GameIndex}"
+        ContentTemplate="{DataTemplate games:FavoriteGames}"
         Route="GamesIndex" />
 
 </Shell>

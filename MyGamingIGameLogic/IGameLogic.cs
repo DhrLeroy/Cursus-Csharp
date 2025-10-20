@@ -11,5 +11,6 @@ namespace ILogic
     {
         void AddGame(Game newgame);
         List<Game> GeefAlleGames(int? leeftijd);
+        List<Game> GeefFavorieteGames();
     }
 }
