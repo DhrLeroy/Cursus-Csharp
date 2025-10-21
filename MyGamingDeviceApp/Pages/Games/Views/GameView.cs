@@ -51,7 +51,7 @@ public class GameView : ContentView
         if (BindingContext is Game game)
         {
             await Shell.Current.GoToAsync(nameof(Pages.Games.GameDetail),
-                new Dictionary<string, object> { { nameof(GameDetail.Game), game } });
+                new Dictionary<string, object> { { nameof(GameDetail.MyGame), game } });
         }
     }
 }
