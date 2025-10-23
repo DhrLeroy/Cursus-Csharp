@@ -43,51 +43,38 @@ namespace Oplossing7C
             Console.WriteLine(string.Join(" ", onderdelen));
         }
 
-        public float[] GeefNulpunten()
+        public List<double> GeefNulpunten()
         {
-            float[] nulpunten;
+            var nulpunten = new List<double>();
             if (CoefA != 0) {
                 var discrimant = (CoefB * CoefB) - (4 * CoefA * CoefC);
                 if(discrimant >= 0)
                 {
-                    nulpunten = new float[2];
                     var x1 = (-1 * (CoefB) - Math.Sqrt(discrimant)) / (2 * CoefA);
                     var x2 = (-1 * (CoefB) + Math.Sqrt(discrimant)) / (2 * CoefA);
-                    nulpunten[0] = x1;
-                    nulpuntenen[1] = x2;
+                    nulpunten.Add(x1);
+                    nulpunten.Add(x2);
                 }else if(discrimant == 0)
                 {
-                    nulpunten = new float[1];
                     var x1 = (-1 * CoefB) / (2 * CoefA);
-                    nulpunten[0] = x1;
+                    nulpunten.Add(x1);
                 }
                 else
                 {
-                    nulpunten = new float[0];
+                    // Geen reële nulpunten
                 }
-
             }
-            else if(CoefB != 0) {
+            else if(CoefB != 0)
             {
-                nulpunten = new float[1];
                 var nulpunt = ((-1) * CoefC) / CoefB;
-                nulpunten[0] = nulpunt;
+                nulpunten.Add(nulpunt);
             }
             else
             {
                 if(CoefC == 0)
                 {
-                    nulpunten = new float[201];
-                    nulpunten[0] = 0;
-                    for (int i = 1; i <= 100; i++)
-                    {
-                        nulpunten[i] = i;
-                        nulpunten[100 + 1] = i * (-1);
-                    }
-                }
-                else
-                {
-                    nulpunten = new float[0];
+                    nulpunten.Add(double.NegativeInfinity);
+                    nulpunten.Add(double.PositiveInfinity);
                 }
             }
             return nulpunten;

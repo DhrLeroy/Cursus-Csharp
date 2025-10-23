@@ -21,11 +21,16 @@ public class GameDetail : ContentPage
 
         layout.Children.Clear();
 
-        if(MyGame != null)
+        BindingContext = MyGame;
+
+        if (MyGame != null)
         {
-            layout.Add(new Label { Text = MyGame.Titel });
-            layout.Add(new Label { Text = $"Rating: {MyGame.Rating}" });
-            layout.Add(new Label { Text = MyGame.Genre.ToString() });
+            var titleLayout = new HorizontalStackLayout();
+            titleLayout.Add(new Label() { Text = "Titel: " });
+            var titleEntry = new Entry();
+            titleEntry.SetBinding(Entry.TextProperty, nameof(Game.Titel), BindingMode.TwoWay);
+            titleLayout.Add(titleEntry);
+            layout.Add(titleLayout);
         }
 
 

@@ -1,3 +1,4 @@
+using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Shapes;
 using MyGaming_Classes;
 
@@ -5,11 +6,13 @@ namespace MyGamingDeviceApp.Pages.Games.Views;
 
 public class GameView : ContentView
 {
-	public GameView(Game game)
+    private Border border;
+    public GameView(Game game)
 	{
         BindingContext = game;
 
-        var border = new Border()
+        
+        border = new Border()
         {
             BackgroundColor = Colors.LightBlue,
             StrokeShape = new RoundRectangle()
@@ -21,18 +24,7 @@ public class GameView : ContentView
         };
 
 
-        var hlayout = new HorizontalStackLayout();
-        hlayout.Margin = new Thickness(10);
-        hlayout.Add(new Label() { Text = $"Titel: {game.Titel} ({game.Genre})" });
-        hlayout.Add(new Label() { Text = $"Rating: {game.Rating.ToString()}/5" });
-
-        var marginLabels = new Thickness(3, 0);
-        foreach (Label label in hlayout.Children.OfType<Label>())
-        {
-            label.Margin = marginLabels;
-        }
-
-        border.Content = hlayout;
+        UpdateView();
 
 
         border.GestureRecognizers.Add(new TapGestureRecognizer()
@@ -41,6 +33,25 @@ public class GameView : ContentView
         });
 
         Content = border;
+    }
+
+    public void UpdateView()
+    {
+        if (BindingContext is Game game)
+        {
+            var hlayout = new HorizontalStackLayout();
+            hlayout.Margin = new Thickness(10);
+            hlayout.Add(new Label() { Text = $"Titel: {game.Titel} ({game.Genre})" });
+            hlayout.Add(new Label() { Text = $"Rating: {game.Rating.ToString()}/5" });
+
+            var marginLabels = new Thickness(3, 0);
+            foreach (Label label in hlayout.Children.OfType<Label>())
+            {
+                label.Margin = marginLabels;
+            }
+
+            border.Content = hlayout;
+        }
     }
 
 
