@@ -133,6 +133,12 @@ foreach (var race in races)
 
 //Select
 
+//lijst met namen van teams
+List<string> teamnamen = teams.Select(t => t.Naam).ToList();
+
+List<string> race_namen = races.Select(race => race.Naam).ToList();
+
+
 //lijst met namen van races
 
 
