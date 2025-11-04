@@ -13,7 +13,7 @@ namespace Oplossing7G
         public int Gemaakte_doelpunten { get; set; }
         public int Geïncasseerde_doelpunten { get; set; }
 
-        public Wedstrijd(string sponser, params Speler[] spelers)
+        public Wedstrijd(string sponser, List<Speler> spelers)
         {
             Sponsor = sponser;
             Spelers = spelers.ToList();

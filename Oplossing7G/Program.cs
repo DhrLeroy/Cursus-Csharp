@@ -15,7 +15,7 @@ List<Speler> spelers = new List<Speler>()
 };
 
 
-Wedstrijd wedstrijd1 = new Wedstrijd("Slagerij Gino", speler1, speler3, speler5);
+Wedstrijd wedstrijd1 = new Wedstrijd("Slagerij Gino", spelers);
 wedstrijd1.VerhoogScore(true);
 wedstrijd1.VerhoogScore(false);
 wedstrijd1.VerhoogScore(true);

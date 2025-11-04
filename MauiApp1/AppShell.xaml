@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate layouts:MyAbsoluteLayout}"
+        ContentTemplate="{DataTemplate layouts:VStackLayout}"
         Route="StackLayout" />
 
 </Shell>

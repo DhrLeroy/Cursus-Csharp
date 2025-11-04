@@ -15,6 +15,13 @@ public class FavoriteGames : ContentPage
 
         Title = "Favoriete Games";
 
+        
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
         var scroll = new ScrollView();
         scroll.Orientation = ScrollOrientation.Horizontal;
 
@@ -22,7 +29,7 @@ public class FavoriteGames : ContentPage
         layout.Direction = FlexDirection.Row;
         layout.Wrap = FlexWrap.Wrap;
 
-        List<Game> favorieteGames = logic.GeefFavorieteGames();
+        List<Game> favorieteGames = _logic.GeefFavorieteGames();
 
         foreach (var game in favorieteGames)
         {

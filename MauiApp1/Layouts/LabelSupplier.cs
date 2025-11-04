@@ -16,5 +16,10 @@ namespace MauiApp1.Layouts
                 layout.Children.Add(label);
             }
         }
+
+        public static void MakeBackgroundBlue(this VisualElement element)
+        {
+            element.Background = Brush.Red;
+        }
     }
 }

@@ -2,10 +2,10 @@ using MyGaming_Classes;
 
 namespace MyGamingDeviceApp.Pages.Games;
 
-[QueryProperty(nameof(MyGame), nameof(MyGame))]
+[QueryProperty(nameof(GameDetail.Game), nameof(GameDetail.Game))]
 public class GameDetail : ContentPage
 {
-    public Game MyGame { get; set; }
+    public Game Game { get; set; }
 
     private VerticalStackLayout layout;
 
@@ -21,16 +21,24 @@ public class GameDetail : ContentPage
 
         layout.Children.Clear();
 
-        BindingContext = MyGame;
+        BindingContext = Game;
 
-        if (MyGame != null)
+        if (Game != null)
         {
+            
             var titleLayout = new HorizontalStackLayout();
             titleLayout.Add(new Label() { Text = "Titel: " });
             var titleEntry = new Entry();
-            titleEntry.SetBinding(Entry.TextProperty, nameof(Game.Titel), BindingMode.TwoWay);
+            titleEntry.SetBinding(Entry.TextProperty, nameof(MyGaming_Classes.Game.Titel), BindingMode.TwoWay);
             titleLayout.Add(titleEntry);
             layout.Add(titleLayout);
+
+            /*var ratingLayout = new HorizontalStackLayout();
+            ratingLayout.Add(new Label() { Text = "Titel: " });
+            var ratingEntry = new Entry();
+            ratingEntry.SetBinding(Entry.TextProperty, nameof(Game.Rating), BindingMode.TwoWay);
+            ratingLayout.Add(titleEntry);
+            layout.Add(ratingLayout);*/
         }
 
 
