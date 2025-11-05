@@ -34,11 +34,11 @@ public class GameDetail : ContentPage
             layout.Add(titleLayout);
 
             var btn = new Button();
-            btn.Text = "Debug";
+            btn.Text = "Opslaan";
+            btn.HorizontalOptions = LayoutOptions.Center;
             btn.Clicked += (s, e) =>
             {
-                var titel = Spel.Naam;
-                Console.WriteLine();
+                Spel.Naam = titleEntry.Text;
             };
 
             layout.Add(btn);
