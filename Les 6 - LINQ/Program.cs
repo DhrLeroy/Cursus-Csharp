@@ -3,7 +3,8 @@
     "Bert",
     "Javis",
     "Ellie",
-    "Mo"
+    "Mo",
+    "Enes"
 };
 
 
@@ -28,9 +29,23 @@ Console.WriteLine($"Namen kleine letters: {string.Join(", ", namen_in_kleine_let
 var namen_lengtes = namen.Select(naam => $"{naam} ({naam.Length})");
 Console.WriteLine($"Namen lengtes: {string.Join(", ", namen_lengtes)}");
 
+var namen_start_b = namen
+    .Where(naam => naam.StartsWith("B", StringComparison.CurrentCultureIgnoreCase));
+Console.WriteLine($"Namen beginnent met B: {string.Join(", ", namen_start_b)}");
 
+var namen_langer_dan_4 = namen
+    .Where(naam => naam.Length > 4);
+Console.WriteLine($"Namen langer dan 4: {string.Join(", ", namen_langer_dan_4)}");
 
+var namen_met_o = namen.Where(naam => naam.Contains("o", StringComparison.CurrentCultureIgnoreCase));
+Console.WriteLine($"Namen met o: {string.Join(", ", namen_met_o)}");
 
+var namen_eindigt_op_s = namen
+    .Where(naam => naam.EndsWith("s", StringComparison.CurrentCultureIgnoreCase));
+Console.WriteLine($"Namen eindigend op een s: {string.Join(", ", namen_eindigt_op_s)}");
+
+var namen_met_l_op_2de_plaats = namen.Where(naam => naam.IndexOf("l") == 1);
+Console.WriteLine($"Namen met l op de 2de plaats: {string.Join(", ", namen_met_l_op_2de_plaats)}");
 
 List<int> getallen = new List<int>() { 23, 41, 88, -22, 61, 0 };
 

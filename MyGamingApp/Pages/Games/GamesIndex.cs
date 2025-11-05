@@ -14,7 +14,7 @@ public class GamesIndex : ContentPage
         var layout = new VerticalStackLayout();
         foreach (var game in games)
 		{
-			layout.Add(new Label { Text = game.Titel });
+			layout.Add(new Label { Text = game.Naam });
 		}
 
 		Content = new VerticalStackLayout

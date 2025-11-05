@@ -41,7 +41,7 @@ public class GameView : ContentView
         {
             var hlayout = new HorizontalStackLayout();
             hlayout.Margin = new Thickness(10);
-            hlayout.Add(new Label() { Text = $"Titel: {game.Titel} ({game.Genre})" });
+            hlayout.Add(new Label() { Text = $"Titel: {game.Naam} ({game.Genre})" });
             hlayout.Add(new Label() { Text = $"Rating: {game.Rating.ToString()}/5" });
 
             var marginLabels = new Thickness(3, 0);
@@ -62,7 +62,7 @@ public class GameView : ContentView
         if (BindingContext is Game game)
         {
             await Shell.Current.GoToAsync(nameof(GameDetail),
-                new Dictionary<string, object> { { nameof(GameDetail.Game), game } });
+                new Dictionary<string, object> { { nameof(GameDetail.Spel), game } });
         }
     }
 }

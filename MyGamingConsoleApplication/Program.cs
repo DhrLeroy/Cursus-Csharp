@@ -15,7 +15,7 @@ using IHost host = Host.CreateDefaultBuilder().ConfigureServices(s =>
 
 var newgame = new Game();
 Console.Write("Geef een titel: ");
-newgame.Titel = Console.ReadLine();
+newgame.Naam = Console.ReadLine();
 Console.Write("Geef een rating: ");
 newgame.Rating = Convert.ToSingle(Console.ReadLine());
 

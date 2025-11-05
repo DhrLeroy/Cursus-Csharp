@@ -136,11 +136,14 @@ foreach (var race in races)
 //lijst met namen van teams
 List<string> teamnamen = teams.Select(t => t.Naam).ToList();
 
-List<string> race_namen = races.Select(race => race.Naam).ToList();
-
+//
+List<string> teamnamen_met_spatie = teamnamen.Where(tn => tn.Contains(" ")).ToList();
+/*List<string> teamnamen_met_spatie = teams
+    .Select(t => t.Naam)
+    .Where(t => t.Contains(" ")).ToList();*/
 
 //lijst met namen van races
-
+List<string> race_namen = races.Select(race => race.Naam).ToList();
 
 
 //lijst met namen van races en aantal deelnemers
@@ -150,16 +153,24 @@ List<string> race_namen = races.Select(race => race.Naam).ToList();
 
 //SelectMany
 //lijst met alle drivers
-
+List<Driver> drivers = new List<Driver>();
+foreach(var team in teams)
+{
+    foreach(var driver in team.Drivers)
+    {
+        drivers.Add(driver);
+    }
+}
+drivers = teams.SelectMany(t => t.Drivers).ToList();
 
 //lijst met alle autos
-
+List<Car> autos = teams.SelectMany(t => t.Autos).ToList();
 
 //lijst van alle deelnames
-
+List<Deelname> deelnames = teams.SelectMany(t => t.Drivers).SelectMany(d => d.Uitslagen).ToList();
 
 //lijst van alle deelnames (Race: driver)
-
+List<string> deelnames_race_driver = deelnames.Select(d => $"{d.Wedstrijd.Naam}: {d.Driver.Naam}").ToList();
 
 
 

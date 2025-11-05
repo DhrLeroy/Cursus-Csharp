@@ -29,7 +29,7 @@ public class FavoriteGames : ContentPage
         layout.Direction = FlexDirection.Row;
         layout.Wrap = FlexWrap.Wrap;
 
-        List<Game> favorieteGames = _logic.GeefFavorieteGames();
+        List<Game> favorieteGames = _logic.GeefAlleGames(null);
 
         foreach (var game in favorieteGames)
         {

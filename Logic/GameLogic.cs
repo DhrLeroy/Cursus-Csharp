@@ -20,7 +20,7 @@ namespace Logic
 
         public void AddGame(Game newgame)
         {
-            if (string.IsNullOrWhiteSpace(newgame.Titel))
+            if (string.IsNullOrWhiteSpace(newgame.Naam))
             {
                 throw new ArgumentException("Titel mag niet leeg zijn.");
             }
