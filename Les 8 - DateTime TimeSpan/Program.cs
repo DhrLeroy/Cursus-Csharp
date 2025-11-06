@@ -1,4 +1,6 @@
-﻿DateTime geboortedatum = new DateTime(2009, 1, 18);
+﻿using Les_8___DateTime_TimeSpan;
+
+DateTime geboortedatum = new DateTime(2009, 1, 18);
 
 if(geboortedatum.DayOfWeek == DayOfWeek.Sunday)
 {
@@ -22,3 +24,9 @@ var lesuur1 = DateTime.Today + new TimeSpan(8, 40, 0);
 var lesuur2 = lesuur1 + lesuur;
 
 Console.WriteLine(DateTime.Now.ToString("dddd, d MMMM yy HHumm"));
+
+
+
+Console.WriteLine("\n\n\n");
+
+LeeftijdBerekenen.Bereken();
