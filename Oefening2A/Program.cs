@@ -8,3 +8,4 @@ Verschil: 3 - 2 = 1
 Product: 3 x 2 = 6
 Quotiënt: 3 / 2 = 1,5
 */
+

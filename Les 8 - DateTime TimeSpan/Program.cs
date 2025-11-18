@@ -28,5 +28,3 @@ Console.WriteLine(DateTime.Now.ToString("dddd, d MMMM yy HHumm"));
 
 
 Console.WriteLine("\n\n\n");
-
-LeeftijdBerekenen.Bereken();

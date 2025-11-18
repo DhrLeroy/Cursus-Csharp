@@ -13,9 +13,8 @@ if (geboorte > DateTime.Today)
 }
 else
 {
-    var verjaardag = new DateTime(DateTime.Today.Year, maand, dag);
     var leeftijd = DateTime.Today.Year - jaar;
-    if (verjaardag > DateTime.Today)
+    if (DateTime.Today.Month < geboorte.Month || (DateTime.Today.Month == geboorte.Month && DateTime.Today.Day < geboorte.Day))
         leeftijd--;
     Console.WriteLine($"{leeftijd} jaar.");
 }

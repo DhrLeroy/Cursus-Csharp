@@ -5,11 +5,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MyGamingDeviceApp"
     xmlns:games="clr-namespace:MyGamingDeviceApp.Pages.Games"
+    xmlns:pages="clr-namespace:MyGamingDeviceApp.Pages"
     Title="MyGamingDeviceApp">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate games:FavoriteGames}"
+        ContentTemplate="{DataTemplate pages:Pagina}"
         Route="GamesIndex" />
 
 </Shell>
+
+    
+    
+    
+    

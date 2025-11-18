@@ -11,7 +11,6 @@ public class GameView : ContentView
 	{
         BindingContext = game;
 
-        
         border = new Border()
         {
             BackgroundColor = Colors.LightBlue,
@@ -23,16 +22,51 @@ public class GameView : ContentView
             Margin = new Thickness(0,10)
         };
 
-
         UpdateView();
 
-
-        border.GestureRecognizers.Add(new TapGestureRecognizer()
-        {
-            Command = new Command(async () => await OnTapped(this, null))
-        });
-
         Content = border;
+
+        var swipe_rechts = new SwipeGestureRecognizer()
+        {
+            Direction = SwipeDirection.Right
+        };
+        swipe_rechts.Swiped += (s, e) =>
+        {
+            if (BindingContext is Game game)
+            {
+                //code om game te verwijderen
+            }
+        };
+        Content.GestureRecognizers.Add(swipe_rechts);
+
+        var swipe_links = new SwipeGestureRecognizer()
+        {
+            Direction = SwipeDirection.Left
+        };
+        swipe_links.Swiped += (s, e) =>
+        {
+            if (BindingContext is Game game)
+            {
+                //code om game toe te voegen aan favorieten
+            }
+        };
+        Content.GestureRecognizers.Add(swipe_links);
+
+
+        var aanraken = new TapGestureRecognizer()
+        {
+            NumberOfTapsRequired = 2
+        };
+        aanraken.Tapped += async (s, e) =>
+        {
+            if (BindingContext is Game game)
+            {
+                await Shell.Current.GoToAsync(nameof(GameDetail),
+                    new Dictionary<string, object> { { nameof(GameDetail.Spel), game } });
+            }
+        };
+
+        Content.GestureRecognizers.Add(aanraken);
     }
 
     public void UpdateView()
@@ -51,18 +85,6 @@ public class GameView : ContentView
             }
 
             border.Content = hlayout;
-        }
-    }
-
-
-
-
-    private async Task OnTapped(object sender, TappedEventArgs e)
-    {
-        if (BindingContext is Game game)
-        {
-            await Shell.Current.GoToAsync(nameof(GameDetail),
-                new Dictionary<string, object> { { nameof(GameDetail.Spel), game } });
         }
     }
 }

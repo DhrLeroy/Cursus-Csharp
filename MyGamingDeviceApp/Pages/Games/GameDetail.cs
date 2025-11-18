@@ -24,8 +24,9 @@ public class GameDetail : ContentPage
         BindingContext = Spel;
 
         if (Spel != null)
-        {
-            
+        { 
+    
+
             var titleLayout = new HorizontalStackLayout();
             titleLayout.Add(new Label() { Text = "Titel: " });
             var titleEntry = new Entry();
