@@ -32,16 +32,14 @@ var personages = games.SelectMany(g => g.Personages).ToList();
 
 
 //lijst van games met minstens 3 achievements
-var x = games.Where(g => g.Achievements.Count() >= 3).ToList();
 
 
 
 //lijst van minderjarige personages
-var minderjarige_personages = personages.Where(p => p.Leeftijd < 18).ToList();
+
 
 //lijst van games met meerdere speelbare personages
-var games_speelbare_personages = games
-    .Where(g => g.Personages.Where(p => p.IsSpeelbaar).ToList().Count > 1).ToList();
+
 
 
 Console.WriteLine();
