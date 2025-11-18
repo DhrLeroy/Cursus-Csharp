@@ -164,8 +164,32 @@ foreach(var team in teams)
 drivers = teams.SelectMany(t => t.Drivers).ToList();
 
 //lijst met alle autos
-List<Car> autos = teams.SelectMany(t => t.Autos).ToList();
+var autos = teams.Select(t => t.Autos).ToList();
 
+//lijst van teamnamen met aantal auto's
+var teamnamen_met_autos = teams.Select(t => $"{t.Naam}: {t.Autos.Count}").ToList();
+
+var teamnamen_met_autos_2 = teams.Select(t => new TeamMetAantalAutos(t.Naam, t.Autos.Count, t.Drivers.Count, t.Drivers.SelectMany(d => d.Uitslagen).Count())).ToList();
+
+foreach(var team in teamnamen_met_autos_2)
+{
+    Console.WriteLine($"{team.Teamnaam}: {team.Aantal_autos} auto's.");
+}
+
+var teamnamen_met_autos_3 = teams.Select(t => new
+                                            {
+                                                Teamnaam = t.Naam,
+                                                Aantal_autos = t.Autos.Count,
+                                                Aantal_drivers = t.Drivers.Count,
+                                                Aantal_deelnames = t.Drivers.SelectMany(d => d.Uitslagen).Count()
+
+                                            }).ToList();
+
+
+foreach (var team in teamnamen_met_autos_3)
+{
+    Console.WriteLine($"{team.Teamnaam}: {team.Aantal_autos} auto's.");
+}
 //lijst van alle deelnames
 List<Deelname> deelnames = teams.SelectMany(t => t.Drivers).SelectMany(d => d.Uitslagen).ToList();
 
@@ -199,6 +223,11 @@ List<string> deelnames_race_driver = deelnames.Select(d => $"{d.Wedstrijd.Naam}:
 
 //Where
 //lijst van alle autos die minder wegen dan 800 kg
+var cars_under800 = teams.SelectMany(t => t.Autos).Where(a => a.Gewicht < 800).ToList();
+
+//lijst van teamsnamen die een auto hebben die minder dan 800 kg weegt
+List<string> teams_with_cars_under_800 = teams.Where(t => t.Autos.Select(a => a.Gewicht).Where(g => g < 800).ToList().Count > 0)
+    .Select(t => t.Naam).ToList();
 
 
 //lijst van alle drivers die uit VK komen

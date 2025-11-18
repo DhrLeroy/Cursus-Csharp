@@ -16,6 +16,9 @@ foreach (var naam in namen)
 }
 eerste_letters = namen.Select(naam => naam.Substring(0, 1)).ToList();
 
+List<int> lengtes_namen = namen.Select(n => n.Length).ToList();
+
+
 Console.WriteLine($"Eerste letters: {string.Join(", ", eerste_letters)}");
 
 var namen_in_kleine_letters = new List<string>();
