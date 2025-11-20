@@ -18,6 +18,7 @@ var vandaag = DateTime.Now;
 
 var sindsGeboorte = vandaag - geboortedatum;
 
+
 var lesuur = new TimeSpan(0, 50, 0);
 
 var lesuur1 = DateTime.Today + new TimeSpan(8, 40, 0);
@@ -28,3 +29,10 @@ Console.WriteLine(DateTime.Now.ToString("dddd, d MMMM yy HHumm"));
 
 
 Console.WriteLine("\n\n\n");
+
+
+var gebeurtenis = new DateTime(2000, 1, 2);
+
+var toekomst = DateTime.Now.Add(DateTime.Now - gebeurtenis);
+
+Console.WriteLine(toekomst.ToString("d"));

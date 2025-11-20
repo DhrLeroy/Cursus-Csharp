@@ -3,12 +3,18 @@ using LINQ_Games.Klassen;
 
 var ontwikkelaars = Data.Ontwikkelaars();
 
+var namen = ontwikkelaars.Select(o => o.Naam).ToList();
 
 //lijst van alle games
-var games = ontwikkelaars.SelectMany(o => o.Games).ToList();
+List<Game> games = ontwikkelaars.SelectMany(o => o.Games).ToList();
 
 //lijst van alle personages
-var personages = games.SelectMany(g => g.Personages).ToList();
+List<Personage> personages = ontwikkelaars
+    .SelectMany(o => o.Games)
+    .SelectMany(game => game.Personages).ToList();
+
+//lijst van alle achievements
+List<Achievement> achievements = games.SelectMany(game => game.Achievements).ToList();
 
 //lijst van de titels van alle games
 

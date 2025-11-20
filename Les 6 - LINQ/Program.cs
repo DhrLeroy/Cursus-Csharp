@@ -1,4 +1,4 @@
-﻿var namen = new List<string>()
+﻿/*var namen = new List<string>()
 {
     "Bert",
     "Javis",
@@ -62,4 +62,171 @@ var vierkantswortels = getallen.Select(g => Math.Sqrt(g));
 Console.WriteLine($"Deling door 2: {string.Join("  |  ", vierkantswortels)}");
 var stralen = getallen;
 var omtrekken_cirkels = stralen.Select(s => Math.Abs(s * 2 * Math.PI));
-Console.WriteLine($"Omtrekken cirkels: {string.Join("  |  ", omtrekken_cirkels)}");
+Console.WriteLine($"Omtrekken cirkels: {string.Join("  |  ", omtrekken_cirkels)}");*/
+
+
+
+
+
+using Les_6___LINQ;
+
+List<int> getallen = new List<int> { -1, -2, 0, -3, 1, 2, 3, 4, 5, 6, 19, 12, -22, 36, -87 };
+
+List<double> kwadraten = new List<double>();
+
+foreach(var getal in getallen)
+{
+    kwadraten.Add(Math.Pow(getal, 2));
+}
+
+kwadraten = getallen.Select(getal => Math.Pow(getal, 2)).ToList();
+var gemiddelde = getallen.Where(g => g != 0).Average();
+gemiddelde = 0;
+var som = 0;
+var getallen_nietnul = 0;
+foreach(var g in getallen)
+{
+    if(g != 0)
+    {
+        som += g;
+        getallen_nietnul++;
+    }
+}
+gemiddelde = Convert.ToSingle(som) / getallen_nietnul;
+
+
+
+
+var stikt_positieve_getallen = getallen.Where(g => g > 0).ToList();
+
+var tienvouden = getallen.Select(g => g * 10).ToList();
+
+var vierkantswortel = getallen.Select(g => Math.Sqrt(g)).ToList();
+
+var derdemachtswortels = getallen.Select(g => Math.Pow(g, 1 / 3f));
+
+var positieve_eenheden = getallen.Where(g => g >= 0).Select(g => g % 10).ToList();
+
+
+
+
+List<string> namen = new List<string>()
+{
+    "Lexi",
+    "Louis + ",
+    "Jules Henri",
+    "Chacha + Chocho",
+    "Shiro",
+    "George",
+    "Martha"
+};
+
+var eerste_letters = namen.Select(naam => naam.Substring(0, 1)).Distinct().ToList();
+
+eerste_letters.Clear();
+
+foreach(var naam in namen)
+{
+    var letter = naam.Substring(0, 1);
+    if (!eerste_letters.Contains(letter))
+    {
+        eerste_letters.Add(letter);
+    }
+}
+
+
+var namen_langer_dan_4 = namen.Where(n => n.Length > 4).ToList();
+
+var namen_met_e = namen.Where(n => n.Contains("e", StringComparison.CurrentCultureIgnoreCase)).ToList();
+
+var gestorven_dieren = namen.Where(n => n.Trim().EndsWith("+")).ToList();
+
+var namen_in_hoofdletters = namen.Select(n => n.ToUpper()).ToList();
+
+//lambda
+
+var tweelingen = namen.Where(n => n.Trim().IndexOf("+") < n.Trim().Length - 2).ToList();
+
+
+
+
+
+
+
+
+
+
+
+
+
+List<Film> films = new List<Film>()
+{
+    new Film(1,"IT",8,new TimeSpan(1,30,0),"Horror"),
+    new Film(2,"Avengers: End Game", 9, new TimeSpan(1,20,0),"Actie"),
+    new Film(3,"IT (1983)",7,new TimeSpan(1,10,0),"Horror")
+};
+
+List<string> titels_films = films.Select(film => film.Titel).ToList();
+
+foreach(var titel in titels_films)
+{
+    Console.WriteLine(titel);
+}
+
+titels_films.Clear();
+
+foreach(var film in films)
+{
+    titels_films.Add(film.Titel);
+}
+foreach (var titel in titels_films)
+{
+    Console.WriteLine(titel);
+}
+
+
+List<string> letters_titel = titels_films.Select(titel => titel.Substring(0,1)).ToList();
+foreach (var letter in letters_titel)
+{
+    Console.WriteLine(letter);
+}
+letters_titel.Clear();
+foreach(var titel in titels_films)
+{
+    letters_titel.Add(titel.Substring(0, 1));
+}
+foreach (var letter in letters_titel)
+{
+    Console.WriteLine(letter);
+}
+
+
+
+
+
+List<string> titels_horrorfilms = films
+    .Where(f => f.Categorie.Equals("horror", StringComparison.CurrentCultureIgnoreCase))
+    .Select(f => f.Titel)
+    .Where(t => t.Length > 3)
+    .ToList();
+titels_horrorfilms.Clear();
+foreach (var titel in titels_horrorfilms)
+{
+    Console.WriteLine(titel);
+}
+foreach (var film in films)
+{
+    if(film.Categorie.Equals("horror", StringComparison.CurrentCultureIgnoreCase) && film.Titel.Length >= 3)
+    {
+        titels_horrorfilms.Add(film.Titel);
+    }
+}
+foreach(var titel in titels_horrorfilms)
+{
+    Console.WriteLine(titel);
+}
+
+
+
+
+
