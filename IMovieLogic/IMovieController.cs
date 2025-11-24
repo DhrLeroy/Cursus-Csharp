@@ -9,6 +9,7 @@ namespace IMovieLogic
 {
     public interface IMovieController
     {
+        List<Movie> GetAllMovies();
         void SaveMovie(Movie movie);
     }
 }

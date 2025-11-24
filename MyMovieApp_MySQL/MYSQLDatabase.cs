@@ -8,6 +8,11 @@ namespace MyMovieApp_MySQL
     {
         public DbSet<Movie> Movies { get; set; }
 
+        public List<Movie> GetAllMovies()
+        {
+            return Movies.Include(m => m.Cast).ToList();
+        }
+
         public void SaveMovie(Movie movie)
         {
             Movies.Add(movie);

@@ -13,6 +13,11 @@ namespace MovieLogic
             this.data = data;
         }
 
+        public List<Movie> GetAllMovies()
+        {
+            return data.GetAllMovies();
+        }
+
         public void SaveMovie(Movie movie)
         {
             data.SaveMovie(movie);

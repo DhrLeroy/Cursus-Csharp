@@ -13,5 +13,9 @@ namespace MyMovieApp_classes
         public string Last_name { get; set; }
         public DateTime Birthday { get; set; }
 
+        public int BepaalLeeftijd()
+        {
+            return Convert.ToInt32((DateTime.Now - Birthday).TotalDays / 365.25);
+        }
     }
 }

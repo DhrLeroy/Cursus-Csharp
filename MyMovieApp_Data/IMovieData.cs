@@ -9,6 +9,7 @@ namespace MyMovieApp_Data
 {
     public interface IMovieData
     {
+        List<Movie> GetAllMovies();
         void SaveMovie(Movie movie);
     }
 }

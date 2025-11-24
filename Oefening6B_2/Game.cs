@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ_Games.Klassen
+namespace Oefening6B_2
 {
     public class Game
     {
