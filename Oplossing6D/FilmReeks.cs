@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Films.Classes
 {
-    public class Reeks
+    public class FilmReeks
     {
         public string Naam { get; set; }
         public List<Film> Films { get; set; }
 
-        public Reeks(string naam, List<Film> films)
+        public FilmReeks(string naam, List<Film> films)
         {
             Naam = naam;
             Films = films;

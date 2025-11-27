@@ -9,12 +9,12 @@ namespace Films.Data
 {
     public class Data
     {
-        public static List<Reeks> GetData()
+        public static List<FilmReeks> GetData()
         {
-            var lotr = new Reeks("The Lord of the Rings", new List<Film>());
-            var starWars = new Reeks("Star Wars", new List<Film>());
-            var theMatrix = new Reeks("The Matrix", new List<Film>());
-            var theHobbit = new Reeks("The Hobbit", new List<Film>());
+            var lotr = new FilmReeks("The Lord of the Rings", new List<Film>());
+            var starWars = new FilmReeks("Star Wars", new List<Film>());
+            var theMatrix = new FilmReeks("The Matrix", new List<Film>());
+            var theHobbit = new FilmReeks("The Hobbit", new List<Film>());
 
             var hugoweaving = new Acteur("Weaving", "Hugo");
             var ianHolm = new Acteur("Holm", "Ian");
@@ -42,6 +42,12 @@ namespace Films.Data
             var thorin = new Rol("Thorin Oakenshield", new Acteur("Armitage", "Richard"));
 
             // Lord of the Rings Films
+            var rollen_fotr = new List<Rol>()
+            {
+                frodo,
+                gandalf,
+                aragorn
+            }
             var fotr = new Film(lotr, "The Fellowship of the Ring", "Peter Jackson", 2001, frodo, gandalf, sam, aragorn, elrond, bilboLotr, legolas);
             var tt = new Film(lotr, "The Two Towers", "Peter Jackson", 2002, frodo, gandalf, sam, aragorn, elrond, legolas);
             var rotk = new Film(lotr, "The Return of the King", "Peter Jackson", 2003, frodo, gandalf, sam, aragorn, elrond, bilboLotr, legolas);
@@ -50,7 +56,7 @@ namespace Films.Data
             // Star Wars Films
             var sw4 = new Film(starWars, "A New Hope", "George Lucas", 1977, luke, vader);
             var sw5 = new Film(starWars, "The Empire Strikes Back", "George Lucas", 1980, luke, vader);
-            var sw6 = new Film(starWars, "Return of the Jedi", "George Lucas", 1983, luke, vader);
+            var sw6 = new Film(starWars, "Return of the Jedi", "George Lucas", 1989, luke, vader);
             starWars.Films.AddRange(new[] { sw4, sw5, sw6 });
 
             // The Matrix Films
@@ -75,7 +81,7 @@ namespace Films.Data
             }
 
             // Final list of series
-            var filmSeries = new List<Reeks> { lotr, starWars, theMatrix, theHobbit };
+            var filmSeries = new List<FilmReeks> { lotr, starWars, theMatrix, theHobbit };
 
             return filmSeries;
         }
