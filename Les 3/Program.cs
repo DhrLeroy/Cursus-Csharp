@@ -54,7 +54,19 @@ Console.WriteLine();
 
 
 
+var nummers = new List<int>() { 1, 2, 3 };
 
+for(int positie = 0;  positie < nummers.Count; positie++)
+{
+    nummers[positie] += 2;
+}
+
+
+
+foreach(var nummer in nummers)
+{
+    Console.WriteLine(nummer);
+}
 
 
 

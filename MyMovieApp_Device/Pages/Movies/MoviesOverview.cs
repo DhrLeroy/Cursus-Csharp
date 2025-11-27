@@ -31,7 +31,7 @@ public class MoviesOverview : ContentPage
 
 			movieClick.Tapped += async (s, e) =>
 			{
-				if (movieClick.BindingContext is Movie m)
+				if (movieView.BindingContext is Movie m)
 				{
 					await AppShell.Current.GoToAsync(nameof(MovieCast), new Dictionary<string, object>()
 					{
