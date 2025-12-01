@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MyRocks_DeviceApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyRocks_DeviceApp"
+    xmlns:rocks="clr-namespace:MyRocks_DeviceApp.Pages.Rocks"
+    Title="MyRocks_DeviceApp">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate rocks:RockOverview}"
+        Route="MainPage" />
+
+</Shell>

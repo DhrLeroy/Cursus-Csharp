@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MyRestaurant_Device.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyRestaurant_Device"
+    xmlns:menu="clr-namespace:MyRestaurant_Device.Pages.Menu_pages"
+    Title="MyRestaurant_Device">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate menu:MenuOverview}"
+        Route="MainPage" />
+
+</Shell>

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyRocks_klassen\MyRocks_klassen.csproj" />
+    <ProjectReference Include="..\MyRocks_LogicInterface\MyRocks_LogicInterface.csproj" />
+  </ItemGroup>
+
+</Project>
