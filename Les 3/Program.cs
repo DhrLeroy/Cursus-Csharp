@@ -1,4 +1,51 @@
-﻿
+﻿var lijst = new List<string>();
+
+lijst.Add("B");
+lijst.Add("C");
+lijst.Add("D");
+
+lijst.Insert(1,"A");
+
+foreach(var x in lijst)
+{
+    Console.WriteLine(x);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -53,7 +100,7 @@ Console.WriteLine();
 
 
 
-
+/*
 var nummers = new List<int>() { 1, 2, 3 };
 
 for(int positie = 0;  positie < nummers.Count; positie++)
@@ -70,7 +117,7 @@ foreach(var nummer in nummers)
 
 
 
-
+*/
 
 
 
