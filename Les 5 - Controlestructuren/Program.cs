@@ -1,4 +1,7 @@
-﻿/*Console.Write("Getal: ");
+﻿
+
+
+/*Console.Write("Getal: ");
 
 var getal = Convert.ToInt32(Console.ReadLine()); 
 
@@ -10,7 +13,7 @@ else
     Console.WriteLine("allebei ");
 */
 
-string email = Console.ReadLine();
+/*string email = Console.ReadLine();
 if (!email.Contains("@"))
 {
  Console.WriteLine("Geen @-teken");
@@ -27,4 +30,4 @@ do
     input = Console.ReadLine();
 } while (password != input);
 
-Console.WriteLine($"Ingelogd");
+Console.WriteLine($"Ingelogd");*/
