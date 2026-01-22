@@ -8,6 +8,21 @@ namespace MyMotorbikeStore_MySQL
     {
         public DbSet<Motorbike> Motorbikes { get; set; }
 
+        public void AddMotorbike(Motorbike nieuweMotor)
+        {
+            Motorbikes.Add(nieuweMotor);
+            var aantal_aanpassingen = SaveChanges();
+            /*if(aantal_aanpassingen == 1)
+            {
+                return true;
+            }*/
+        }
+
+        public void DeleteMotorbike(int id)
+        {
+            Motorbikes.Remove
+        }
+
         public List<Motorbike> GetAllMotorbikes()
         {
             return Motorbikes.ToList();

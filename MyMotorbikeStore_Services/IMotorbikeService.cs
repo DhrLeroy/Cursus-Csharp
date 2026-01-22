@@ -9,6 +9,8 @@ namespace MyMotorbikeStore_Services
 {
     public interface IMotorbikeService
     {
+        void AddMotorbike(Motorbike nieuweMotor);
+        void DeleteMotorbike(int id);
         List<Motorbike> GetAllMotorbikes();
     }
 }

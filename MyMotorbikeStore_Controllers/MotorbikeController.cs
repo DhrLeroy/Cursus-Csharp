@@ -13,6 +13,20 @@ namespace MyMotorbikeStore_Controllers
             this.data = data;
         }
 
+        public void AddMotorbike(Motorbike nieuweMotor)
+        {
+            if(nieuweMotor.Prijs < 0)
+            {
+                return;
+            }
+            data.AddMotorbike(nieuweMotor);
+        }
+
+        public void DeleteMotorbike(int id)
+        {
+            data.DeleteMotorbike(id);
+        }
+
         public List<Motorbike> GetAllMotorbikes()
         {
             return data.GetAllMotorbikes();

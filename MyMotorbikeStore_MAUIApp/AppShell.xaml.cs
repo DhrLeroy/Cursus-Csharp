@@ -7,7 +7,7 @@ namespace MyMotorbikeStore_MAUIApp
         public AppShell()
         {
             InitializeComponent();
-
+            Routing.RegisterRoute(nameof(MotorbikesOverview), typeof(MotorbikesOverview));
             Routing.RegisterRoute(nameof(CreateMotor), typeof(CreateMotor));
         }
     }
