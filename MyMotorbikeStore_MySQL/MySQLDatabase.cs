@@ -20,12 +20,20 @@ namespace MyMotorbikeStore_MySQL
 
         public void DeleteMotorbike(int id)
         {
-            Motorbikes.Remove
+            var motor = GetMotorbikeById(id);
+            Motorbikes.Remove(motor);
+            SaveChanges();
         }
 
         public List<Motorbike> GetAllMotorbikes()
         {
             return Motorbikes.ToList();
+        }
+
+        public Motorbike GetMotorbikeById(int id)
+        {
+    
+            return Motorbikes.First(m => m.Id == id);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

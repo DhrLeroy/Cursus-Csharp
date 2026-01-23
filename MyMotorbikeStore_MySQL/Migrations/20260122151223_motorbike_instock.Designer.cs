@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyMotorbikeStore_MySQL;
 
@@ -11,9 +12,11 @@ using MyMotorbikeStore_MySQL;
 namespace MyMotorbikeStore_MySQL.Migrations
 {
     [DbContext(typeof(MySQLDatabase))]
-    partial class MySQLDatabaseModelSnapshot : ModelSnapshot
+    [Migration("20260122151223_motorbike_instock")]
+    partial class motorbike_instock
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

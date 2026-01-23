@@ -6,6 +6,14 @@ lijst.Add("D");
 
 lijst.Insert(1,"A");
 
+lijst.Remove("C");
+
+for(int i = 1; i <= 4; i++)
+{
+    Console.Write($"Geef een letter in ({i}): ");
+    lijst.Add(Console.ReadLine());
+}
+
 foreach(var x in lijst)
 {
     Console.WriteLine(x);

@@ -9,6 +9,7 @@
         public string Model { get; set; }
         public DateTime Productiedatum { get; set; }
         public float Prijs { get; set; }
+        public int InStock { get; set; }
 
     }
 }

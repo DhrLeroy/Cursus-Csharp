@@ -24,7 +24,9 @@ namespace MyMotorbikeStore_Controllers
 
         public void DeleteMotorbike(int id)
         {
-            data.DeleteMotorbike(id);
+            Motorbike motor = data.GetMotorbikeById(id);
+            if(motor.InStock==0)
+                data.DeleteMotorbike(id);
         }
 
         public List<Motorbike> GetAllMotorbikes()
