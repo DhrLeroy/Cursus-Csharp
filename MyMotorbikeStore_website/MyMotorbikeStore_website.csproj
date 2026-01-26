@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyMotorbikeStore_Controllers\MyMotorbikeStore_Controllers.csproj" />
+    <ProjectReference Include="..\MyMotorbikeStore_Data\MyMotorbikeStore_Data.csproj" />
+    <ProjectReference Include="..\MyMotorbikeStore_MySQL\MyMotorbikeStore_MySQL.csproj" />
+    <ProjectReference Include="..\MyMotorbikeStore_Services\MyMotorbikeStore_Services.csproj" />
+  </ItemGroup>
+
+</Project>

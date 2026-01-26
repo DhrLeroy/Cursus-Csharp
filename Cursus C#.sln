@@ -743,6 +743,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Muziekwinkel", "Muziekwinke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muziekwinkel_databank", "Muziekwinkel_databank\Muziekwinkel_databank.csproj", "{5A197D2C-098D-42B5-AA13-F94453278F39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMotorbikeStore_website", "MyMotorbikeStore_website\MyMotorbikeStore_website.csproj", "{79CAB2E4-3EED-45E6-BA54-2F8E6ED87E8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1702,6 +1704,10 @@ Global
 		{5A197D2C-098D-42B5-AA13-F94453278F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A197D2C-098D-42B5-AA13-F94453278F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A197D2C-098D-42B5-AA13-F94453278F39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79CAB2E4-3EED-45E6-BA54-2F8E6ED87E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79CAB2E4-3EED-45E6-BA54-2F8E6ED87E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79CAB2E4-3EED-45E6-BA54-2F8E6ED87E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79CAB2E4-3EED-45E6-BA54-2F8E6ED87E8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2074,6 +2080,7 @@ Global
 		{DCE3BC78-CF78-4B3A-8E51-5B3629EC29AE} = {8D2429CC-C631-42B8-A239-D40DED4B3958}
 		{8D2429CC-C631-42B8-A239-D40DED4B3958} = {35F6069A-03E6-42A3-AEE1-E2BC3E9296F0}
 		{5A197D2C-098D-42B5-AA13-F94453278F39} = {8D2429CC-C631-42B8-A239-D40DED4B3958}
+		{79CAB2E4-3EED-45E6-BA54-2F8E6ED87E8F} = {DED23F93-151E-4AB9-A801-09C4B884AC86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}
