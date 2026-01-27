@@ -14,7 +14,7 @@ namespace Muziekwinkel_databank
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseMySql("server=localhost;database=Muziekwinkel;user=root;Peppa123$"
+            optionsBuilder.UseMySql("server=localhost;database=Muziekwinkel;user=root;password=Peppa123$"
                 , new MySqlServerVersion(new Version(9, 5, 0)));
         }
     }

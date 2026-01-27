@@ -10,6 +10,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<IMotorbikeService, MotorbikeController>();
 builder.Services.AddScoped<IMotorbikeData, MySQLDatabase>();
+builder.Services.AddScoped<MySQLDatabase>();
 
 var app = builder.Build();
 

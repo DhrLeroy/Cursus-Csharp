@@ -50,7 +50,7 @@ public class MotorbikesOverview : ContentPage
             removeSwipe.Swiped += (s, e) =>
             {
                 _motorbikeService.DeleteMotorbike(motorbike.Id);
-            }
+            };
 
             hstack.Children.Add(label);
             hstack.Children.Add(verwijder);

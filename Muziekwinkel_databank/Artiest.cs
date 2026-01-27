@@ -8,9 +8,12 @@ namespace Muziekwinkel_databank
 {
     public class Artiest
     {
+        public int artiestid { get; set; }
         public string Naam { get; set; }
         public string Voornaam { get; set; }
         public int Geboortejaar { get; set; }
         public bool Is_Man { get; set; }
+        public string Genre { get; set; }
+        public bool Heeft_Beperking { get; set; }
     }
 }

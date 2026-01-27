@@ -1,20 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyMotorbikeStore_Services;
 
 namespace MyMotorbikeStore_website.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        public IMotorbikeService _motorbikeService;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(IMotorbikeService service)
         {
-            _logger = logger;
+            _motorbikeService = service;
         }
 
         public void OnGet()
         {
-
+            
         }
     }
 }
