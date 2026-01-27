@@ -15,5 +15,13 @@ namespace Muziekwinkel_databank
         public bool Is_Man { get; set; }
         public string Genre { get; set; }
         public bool Heeft_Beperking { get; set; }
+        public List<CD> CDs { get; set; }
+
+        public Artiest(string naam, string voornaam, string genre)
+        {
+            Naam = naam;
+            Voornaam = voornaam;
+            Genre = genre;
+        }
     }
 }
