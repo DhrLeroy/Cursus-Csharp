@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using MyMotorbikeStore_MySQL;
 using MyMotorbikeStore_classes;
+using MyMotorbikeStore_Services;
 
 namespace MyMotorbikeStore_website.Pages.Motorbikes
 {
     public class DeleteModel : PageModel
     {
-        private readonly MyMotorbikeStore_MySQL.MySQLDatabase _context;
+        private readonly IMotorbikeService motorbikeService;
 
-        public DeleteModel(MyMotorbikeStore_MySQL.MySQLDatabase context)
+        public DeleteModel(IMotorbikeService motorbikeService)
         {
-            _context = context;
+            this.motorbikeService = motorbikeService;
         }
 
         [BindProperty]
@@ -29,7 +30,7 @@ namespace MyMotorbikeStore_website.Pages.Motorbikes
                 return NotFound();
             }
 
-            var motorbike = await _context.Motorbikes.FirstOrDefaultAsync(m => m.Id == id);
+            var motorbike = motorbikeService.GetMotorbikeById(id.Value);
 
             if (motorbike == null)
             {
@@ -49,13 +50,7 @@ namespace MyMotorbikeStore_website.Pages.Motorbikes
                 return NotFound();
             }
 
-            var motorbike = await _context.Motorbikes.FindAsync(id);
-            if (motorbike != null)
-            {
-                Motorbike = motorbike;
-                _context.Motorbikes.Remove(Motorbike);
-                await _context.SaveChangesAsync();
-            }
+            motorbikeService.DeleteMotorbike(id.Value);
 
             return RedirectToPage("./Index");
         }

@@ -8,16 +8,17 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyMotorbikeStore_MySQL;
 using MyMotorbikeStore_classes;
+using MyMotorbikeStore_Services;
 
 namespace MyMotorbikeStore_website.Pages.Motorbikes
 {
     public class EditModel : PageModel
     {
-        private readonly MyMotorbikeStore_MySQL.MySQLDatabase _context;
+        private readonly IMotorbikeService motorbikeService;
 
-        public EditModel(MyMotorbikeStore_MySQL.MySQLDatabase context)
+        public EditModel(IMotorbikeService motorbikeService)
         {
-            _context = context;
+            this.motorbikeService = motorbikeService;
         }
 
         [BindProperty]
@@ -30,7 +31,7 @@ namespace MyMotorbikeStore_website.Pages.Motorbikes
                 return NotFound();
             }
 
-            var motorbike =  await _context.Motorbikes.FirstOrDefaultAsync(m => m.Id == id);
+            var motorbike = motorbikeService.GetMotorbikeById(id.Value);
             if (motorbike == null)
             {
                 return NotFound();
@@ -48,11 +49,11 @@ namespace MyMotorbikeStore_website.Pages.Motorbikes
                 return Page();
             }
 
-            _context.Attach(Motorbike).State = EntityState.Modified;
+        
 
             try
             {
-                await _context.SaveChangesAsync();
+                motorbikeService.SaveMotorbike(Motorbike);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -71,7 +72,15 @@ namespace MyMotorbikeStore_website.Pages.Motorbikes
 
         private bool MotorbikeExists(int id)
         {
-            return _context.Motorbikes.Any(e => e.Id == id);
+            try
+            {
+                motorbikeService.GetMotorbikeById(id);
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

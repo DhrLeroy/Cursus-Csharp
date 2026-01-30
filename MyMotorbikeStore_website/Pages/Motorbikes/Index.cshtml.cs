@@ -7,23 +7,24 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using MyMotorbikeStore_MySQL;
 using MyMotorbikeStore_classes;
+using MyMotorbikeStore_Services;
 
 namespace MyMotorbikeStore_website.Pages.Motorbikes
 {
     public class IndexModel : PageModel
     {
-        private readonly MyMotorbikeStore_MySQL.MySQLDatabase _context;
+        private readonly IMotorbikeService motorbikeService;
 
-        public IndexModel(MyMotorbikeStore_MySQL.MySQLDatabase context)
+        public IndexModel(IMotorbikeService motorbikeService)
         {
-            _context = context;
+            this.motorbikeService = motorbikeService;
         }
 
         public IList<Motorbike> Motorbike { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Motorbike = await _context.Motorbikes.ToListAsync();
+            Motorbike = motorbikeService.GetAllMotorbikes();
         }
     }
 }

@@ -12,5 +12,7 @@ namespace MyMotorbikeStore_Services
         void AddMotorbike(Motorbike nieuweMotor);
         void DeleteMotorbike(int id);
         List<Motorbike> GetAllMotorbikes();
+        Motorbike GetMotorbikeById(int value);
+        void SaveMotorbike(Motorbike motorbike);
     }
 }

@@ -31,7 +31,17 @@ namespace MyMotorbikeStore_Controllers
 
         public List<Motorbike> GetAllMotorbikes()
         {
-            return data.GetAllMotorbikes().Where(m => m.InStock > 0).ToList(); ;
+            return data.GetAllMotorbikes().Where(m => m.InStock > 0).ToList();
+        }
+
+        public Motorbike GetMotorbikeById(int value)
+        {
+            return data.GetMotorbikeById(value);
+        }
+
+        public void SaveMotorbike(Motorbike motorbike)
+        {
+            data.SaveMotorbike(motorbike);
         }
     }
 }

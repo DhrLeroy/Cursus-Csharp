@@ -1,9 +1,5 @@
-﻿var a = 8;
+﻿var aantal = 11;
 
-var b = 2;
+var onafgerond = (aantal - (aantal / 5 * 3));
 
-
-var resultaat = Convert.ToDouble(Math.Pow((Convert.ToSingle(a + b) / (a - b)), 2));
-
-
-Console.WriteLine(resultaat);
+Console.WriteLine(onafgerond);

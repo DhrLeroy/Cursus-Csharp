@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using MyMotorbikeStore_MySQL;
 using MyMotorbikeStore_classes;
+using MyMotorbikeStore_Services;
 
 namespace MyMotorbikeStore_website.Pages.Motorbikes
 {
     public class DetailsModel : PageModel
     {
-        private readonly MyMotorbikeStore_MySQL.MySQLDatabase _context;
+        private readonly IMotorbikeService motorbikeService;
 
-        public DetailsModel(MyMotorbikeStore_MySQL.MySQLDatabase context)
+        public DetailsModel(IMotorbikeService motorbikeService)
         {
-            _context = context;
+            this.motorbikeService = motorbikeService;
         }
 
         public Motorbike Motorbike { get; set; } = default!;
@@ -28,7 +29,7 @@ namespace MyMotorbikeStore_website.Pages.Motorbikes
                 return NotFound();
             }
 
-            var motorbike = await _context.Motorbikes.FirstOrDefaultAsync(m => m.Id == id);
+            var motorbike = motorbikeService.GetMotorbikeById(id.Value);
             if (motorbike == null)
             {
                 return NotFound();

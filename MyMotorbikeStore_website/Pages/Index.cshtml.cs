@@ -6,11 +6,8 @@ namespace MyMotorbikeStore_website.Pages
 {
     public class IndexModel : PageModel
     {
-        public IMotorbikeService _motorbikeService;
-
-        public IndexModel(IMotorbikeService service)
+        public IndexModel()
         {
-            _motorbikeService = service;
         }
 
         public void OnGet()

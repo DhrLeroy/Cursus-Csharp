@@ -1,0 +1,23 @@
+﻿@page
+@model MovieReviewWebsite.Pages.Films.CastingModel
+@{
+    <form method="post">
+        <input asp-for="@Model.Film.Id" type="hidden" />
+        <h1>@Model.Film.Titel</h1>
+        <p>Vul de rol in om een acteur toe te voegen of laat deze leeg om deze acteur niet in de cast op te nemen.</p>
+        <ul>
+            @for (int i = 0; i < Model.Casting.Count; i++)
+            {
+                <li>
+                    <input asp-for="Casting[i].Id" type="hidden" />
+                    <input asp-for="Casting[i].Acteur.Id" type="hidden"/>
+                    <span>@Model.Casting[i].Acteur.Voornaam @Model.Casting[i].Acteur.Naam</span>
+                    <input asp-for="Casting[i].Rol" />
+                </li>
+            }
+        </ul>
+        <input type="submit" value="Opslaan"/>
+    </form>
+    
+
+}

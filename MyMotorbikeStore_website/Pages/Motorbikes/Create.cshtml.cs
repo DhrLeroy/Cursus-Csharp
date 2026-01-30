@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MyMotorbikeStore_MySQL;
 using MyMotorbikeStore_classes;
+using MyMotorbikeStore_Services;
 
 namespace MyMotorbikeStore_website.Pages.Motorbikes
 {
     public class CreateModel : PageModel
     {
-        private readonly MyMotorbikeStore_MySQL.MySQLDatabase _context;
+        private readonly IMotorbikeService motorbikeService;
 
-        public CreateModel(MyMotorbikeStore_MySQL.MySQLDatabase context)
+        public CreateModel(IMotorbikeService motorbikeService)
         {
-            _context = context;
+            this.motorbikeService = motorbikeService;
         }
 
         public IActionResult OnGet()
@@ -35,8 +36,7 @@ namespace MyMotorbikeStore_website.Pages.Motorbikes
                 return Page();
             }
 
-            _context.Motorbikes.Add(Motorbike);
-            await _context.SaveChangesAsync();
+            motorbikeService.AddMotorbike(Motorbike);
 
             return RedirectToPage("./Index");
         }

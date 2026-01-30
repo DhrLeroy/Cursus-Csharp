@@ -36,6 +36,12 @@ namespace MyMotorbikeStore_MySQL
             return Motorbikes.First(m => m.Id == id);
         }
 
+        public void SaveMotorbike(Motorbike motorbike)
+        {
+            Attach(motorbike).State = EntityState.Modified;
+            SaveChanges();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

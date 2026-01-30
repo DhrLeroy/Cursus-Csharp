@@ -1,12 +1,6 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "";
 }
 
-<ul>
-    @foreach(var motor in Model._motorbikeService.GetAllMotorbikes())
-    {
-        <li>@motor.Merk @motor.Model</li>
-    }
-</ul>
