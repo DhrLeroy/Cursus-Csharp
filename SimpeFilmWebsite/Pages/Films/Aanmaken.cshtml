@@ -1,0 +1,18 @@
+﻿@page
+@model SimpeFilmWebsite.Pages.Films.AanmakenModel
+@{
+}
+
+<form method="post">
+    <table>
+        <tr>
+            <td>Titel: </td>
+            <td><input asp-for="Film.Naam"/></td>
+        </tr>
+        <tr>
+            <td>Score (op 10): </td>
+            <td><input asp-for="Film.Score_op_10"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="Opslaan"/>
+</form>

@@ -1,4 +1,8 @@
+using PizzaRestaurantWebsite.Databank;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<MySQLDatabank>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

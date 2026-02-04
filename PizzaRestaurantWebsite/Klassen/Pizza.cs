@@ -13,14 +13,14 @@
         public string Naam { get; set; }
         public double Prijs { get; set; }
         public Maat Maat { get; set; }
-        public List<Bestelijn> Bestellijnen { get; set; }
+        public List<Bestelijn> Bestellijnen { get; set; } = new List<Bestelijn>();
     }
 
     public class Bestelling
     {
         public int Id { get; set; }
         public DateTime Datum {  get; set; }
-        public List<Bestelijn> Bestellijnen { get; set; }
+        public List<Bestelijn> Bestellijnen { get; set; } = new List<Bestelijn>();
     }
     public class Bestelijn
     {

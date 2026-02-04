@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Klantengegevens</th>
+            <th colspan="3">Aantal pizza's</th>
+        </tr>
+        <tr>
+            <th>E-mailadres</th>
+            <th>Adres</th>
+            <th>Margherita</th>
+            <th>Hawaii</th>
+            <th>Napolitana</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var b in Model.Bestellingen)
+        {
+            <tr>
+                <td>@b.Emailadres</td>
+                <td>@b.Adres</td>
+                <td>@b.Aantal_Margheritas</td>
+                <td>@b.Aantal_Hawaiis</td>
+                <td>@b.Aantal_Napolitanas</td>
+            </tr>
+        }
+    </tbody>
+</table>

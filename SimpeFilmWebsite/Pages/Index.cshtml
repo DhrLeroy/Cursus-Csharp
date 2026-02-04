@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Films";
+}
+
+<ul>
+    @foreach(var film in Model.Films)
+    {
+        <li>@film.Naam: @film.Score_op_10 / 10</li>
+    }
+</ul>
