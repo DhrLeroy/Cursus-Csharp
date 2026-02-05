@@ -1,0 +1,12 @@
+﻿@page
+@model PizzaRestaurantWebsite.Pages.Bestellingen.BestellenModel
+@{
+    <form method="post">
+        <ul>
+            <li>Margherita: <input asp-for="Bestelling.Aantal_Margherita" /></li>
+            <li>Hawaii: <input asp-for="Bestelling.Aantal_Hawaii" /></li>
+        </ul>
+        <input type="submit" value="Bestelling plaatsen"/>
+    </form>
+    
+}

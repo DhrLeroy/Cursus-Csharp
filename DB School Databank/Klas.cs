@@ -9,6 +9,6 @@ namespace DB_School_Databank
     public class Klas
     {
         public string Naam { get; set; }
-        public List<Leerling> Leerlingen { get; set; } = new List<Leerling>();
+        public virtual ICollection<Leerling> Leerlingen { get; set; } = new List<Leerling>();
     }
 }

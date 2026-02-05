@@ -25,10 +25,13 @@ while (true)
     else
     {
         var klasNaam = invoer;
-        var klas = db.Klassen
+        //Eager loading: Include
+        /*var klas = db.Klassen
             .Include(k => k.Leerlingen)
+            .First(k => k.Naam == klasNaam); */
+        var klas = db.Klassen
             .First(k => k.Naam == klasNaam);
-        
+
         Console.WriteLine("Leerlingen:");
         foreach(var leerling in klas.Leerlingen)
         {

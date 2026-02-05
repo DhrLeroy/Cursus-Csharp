@@ -12,7 +12,7 @@ namespace DB_School_Databank
         public string Voornaam { get; set; }
         public string Naam { get; set; }
         public DateTime? Geboortedatum { get; set; }
-        public Klas Klas { get; set; }
+        public virtual Klas Klas { get; set; }
 
     }
 }

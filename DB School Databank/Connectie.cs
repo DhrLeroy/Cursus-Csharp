@@ -17,6 +17,7 @@ namespace DB_School_Databank
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseMySql("server=localhost; database=school;user=root;password=Peppa123$",
                 new MySqlServerVersion(new Version(9, 10, 0)));
+            optionsBuilder.UseLazyLoadingProxies();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
