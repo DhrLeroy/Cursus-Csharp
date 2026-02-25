@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+//Deze lijn zorgt ervoor dat als een pagina via de constructor een Databank-object vraagt, er een krijgt
 builder.Services.AddScoped<Databank>();
 
 

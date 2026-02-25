@@ -3,25 +3,32 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<a asp-area="" asp-page="/Bestelling">Nieuwe bestelling plaatsen</a>
+
 <table>
     <thead>
         <tr>
-            <th colspan="2">Klantengegevens</th>
-            <th colspan="3">Aantal pizza's</th>
-        </tr>
-        <tr>
+            <th>Datum</th>
             <th>E-mailadres</th>
-            <th>Adres</th>
-            <th>Margherita</th>
-            <th>Hawaii</th>
-            <th>Napolitana</th>
+            <th>Pizza's</th>
+            <th>Totaal</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var b in Model.Bestellingen)
+        @foreach(var bestelling in Model.Bestellingen)
         {
             <tr>
-                <td>@b.Emailadres</td>
+                <td>@bestelling.Datum</td>
+                <td>@bestelling.Emailadres</td>
+                <td>
+                    <ul>
+                        @foreach(var lijn in bestelling.Bestellijnen)
+                        {
+                            <li>@lijn.Pizza.Naam: @lijn.Aantal</li>
+                        }
+                    </ul>
+                </td>
+                <td>€ @bestelling.BerekenTotaal()</td>
             </tr>
         }
     </tbody>

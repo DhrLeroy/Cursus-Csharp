@@ -37,8 +37,8 @@ while (true)
                 Console.WriteLine($"{tekenaar.Id}: {tekenaar.Voornaam} {tekenaar.Naam}");
             }
             var t_id = Convert.ToInt32(Console.ReadLine());
-            var t = db.Tekenaars.First(t => t.Id == t_id);
-            album.Tekenaar = t;
+            var tk = db.Tekenaars.First(t => t.Id == t_id);
+            album.Tekenaar = tk;
 
             db.SaveChanges();
         }
