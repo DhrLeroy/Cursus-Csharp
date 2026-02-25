@@ -12,12 +12,7 @@ namespace SimplePizzaWebsite.Pages
 
         public void OnGet()
         {
-            Bestellingen = new List<Bestelling>()
-            {
-                new Bestelling("Albert.Einstein@imsosmart.com", "Bergstraat 67 - 9000 Gent", 1, 2, 3),
-                new Bestelling("Emmanuel_Kant@ithinkso.org", "Dorpwegel 1 - 1000 Brussel", 0, 1, 0)
-
-            };
+            Bestellingen = new List<Bestelling>();
             //Pizzas = PizzaProvider.Pizzas();
         }
 

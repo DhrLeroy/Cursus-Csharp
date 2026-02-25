@@ -1,16 +1,19 @@
 ﻿@page
-@model PrivacyModel
+@model BestellingModel
 @{
     ViewData["Title"] = "Bestelling";
 }
 <p>Nieuwe bestelling: </p>
 <form method="post">
+    <p>E-mailadres: <input asp-for="Bestelling.Emailadres" /></p>
     <ul>
-        <li>E-mailadres: <input asp-for="Bestelling.Emailadres" /></li>
-        <li>Adres: <input asp-for="Bestelling.Adres" /></li>
-        <li>Aantal pizza's Margherita': <input asp-for="Bestelling.Aantal_Margheritas" /></li>
-        <li>Aantal pizza's Hawaii': <input asp-for="Bestelling.Aantal_Hawaiis" /></li>
-        <li>Aantal pizza's Napolitana': <input asp-for="Bestelling.Aantal_Napolitanas" /></li>
+        @for(int i = 0; i < Model.Bestelling.Bestellijnen.Count; i++)
+        {
+            <li>
+                @Model.Bestelling.Bestellijnen[i].Pizza.Naam: <input asp-for="Bestelling.Bestellijnen[i].Pizza.Id" hidden/> <input asp-for="Bestelling.Bestellijnen[i].Aantal" />
+            </li>
+        }
+)
     </ul>
     <input type="submit" value="Bestelling plaatsen"/>
 </form>

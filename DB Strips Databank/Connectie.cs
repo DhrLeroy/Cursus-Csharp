@@ -7,7 +7,7 @@ namespace DB_Strips_Databank
         public DbSet<Strip> Strips { get; set; }
         public DbSet<Tekenaar> Tekenaars { get; set; }
         public DbSet<Album> Albums { get; set; }
-
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
