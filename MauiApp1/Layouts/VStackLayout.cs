@@ -7,46 +7,51 @@ public class VStackLayout : ContentPage
 	public VStackLayout()
 	{
 		var layout = new VerticalStackLayout();
-        //layout.SetLabels();
 
-        var border = new Border()
+        var nL = new HorizontalStackLayout();
+        var lblNaam = new Label();
+        lblNaam.Text = "Naam: ";
+
+        nL.Add(new Label() { Text = "Naam: " });
+        nL.Add(new Entry() { Placeholder = "Vul hier jouw naam in" });
+        var naamEntry = new Entry() { Placeholder = "Vul hier jouw naam in" };
+        Console.WriteLine(naamEntry.Text);
+        var vL = new HorizontalStackLayout();
+        vL.Add(new Label() { Text = "Voornaam: " });
+        vL.Add(new Entry() { Placeholder = "Voornaam" });
+        var lL = new HorizontalStackLayout();
+        lL.Add(new Label() { Text = "Leeftijd: " });
+        lL.Add(new Entry() { Placeholder = "Leeftijd (in jaar)" });
+
+        //layout.Add(nL);
+        //layout.Add(vL);
+        //layout.Add(lL);
+
+        var btn = new Button() { Text = "_" };
+        btn.Clicked += (s, e) =>
         {
-            Stroke = Brush.BlueViolet,
-            StrokeThickness = 4,
-            StrokeShape = new RoundRectangle()
-            {
-                CornerRadius = new CornerRadius(2)
-            },
-            Background = Brush.LightGreen,
-            Padding = new Thickness(16, 8),
-            HorizontalOptions = LayoutOptions.Center
+            btn.Text = btn.Text + "x";
         };
-        border.Stroke = Brush.DarkMagenta;
 
-        border.MakeBackgroundBlue();
+        layout.Add(btn);
+        layout.Add(naamEntry);
 
-        
+        var chck = new CheckBox();
+        chck.IsChecked = true;
+        layout.Add(chck);
 
-        var hlayout = new HorizontalStackLayout();
-        hlayout.MakeBackgroundBlue();
+        layout.Children.Clear();
+        var hEntry = new Entry();
+        hEntry.Placeholder = "Hoogte (in m): ";
+        layout.Add(hEntry);
 
-
-        hlayout.Background = Brush.LightYellow;
-        var l1 = new Label() { Text = "Label 1" };
-        var l2 = new Label() { Text = "Label 2" };
-        var l3 = new Label() { Text = "Label 3" };
-        hlayout.Children.Add(l1);
-        hlayout.Children.Add(l2);
-        hlayout.Children.Add(l3);
-        foreach(var label in hlayout.Children.OfType<Label>())
+        var btnH = new Button() { Text = "Toon hoogte" };
+        btnH.Clicked += (s, e) =>
         {
-            label.MakeBackgroundBlue();
-        }
-
-        border.Content = hlayout;
-
-        layout.Children.Add(border);
-		
-		Content = layout;
+            var height = Convert.ToSingle(hEntry.Text);
+            btnH.Text = $"{height * 2 / 2} meter";
+        };
+        layout.Add(btnH);
+        Content = layout;
     }
 }
