@@ -1,0 +1,13 @@
+﻿@page
+@model AanmakenModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<form method="post">
+    <h1>Welkom @Model.Naam</h1>
+    <p>Titel: <input asp-for="@Model.Game.Titel"/></p>
+    <p>Genre: <input name="Game.Genre" /></p>
+    <p>Studio: <input asp-for="@Model.Game.Studio" /></p>
+    <button type="submit">Opslaan</button>
+</form>
+

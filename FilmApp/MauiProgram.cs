@@ -7,6 +7,7 @@ namespace FilmApp
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+            builder.Services.Add
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>

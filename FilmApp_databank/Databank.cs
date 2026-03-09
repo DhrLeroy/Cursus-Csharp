@@ -15,8 +15,8 @@ namespace FilmApp_databank
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseMySql("server=localhost;database=filmapp;user=root;password=Peppa123$",
-                new MySqlServerVersion(new Version(9, 4, 0)));
+            optionsBuilder.UseMySql("Server=localhost;database=filmapp;user=root;password=Peppa123$",
+                new MySqlServerVersion(new Version(9, 4, 0)), options => options.EnableRetryOnFailure());
         }
     }
 }

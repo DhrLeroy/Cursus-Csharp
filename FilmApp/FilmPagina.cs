@@ -5,45 +5,52 @@ namespace FilmApp;
 
 public class FilmPagina : ContentPage
 {
-	public FilmPagina()
+    private VerticalStackLayout vStackFilms = new VerticalStackLayout();
+    private Databank db = new Databank();
+    public FilmPagina()
     {
-        var db = new Databank();
+        Title = "Films";
+
         var vStack = new VerticalStackLayout();
         Content = vStack;//NIET VERGETEN
 
-        var vStackFilms = new VerticalStackLayout();
         vStack.Add(vStackFilms);//NIET VERGETEN
-        foreach (var film in db.Films)
-        {
-            var lblFilm = new Label();
-            lblFilm.Text = $"{film.Titel} ({film.Duurtijd_minuten} minuten)";
-            vStackFilms.Add(lblFilm);
-        }
+        ShowMovies();
 
         var hStackTitel = new HorizontalStackLayout();
-		var lblTitel = new Label();
-		lblTitel.Text = "Titel: ";
-		var entryTitel = new Entry();
-		entryTitel.Placeholder = "Vul hier de titel in";
-		hStackTitel.Add(lblTitel); //NIET VERGETEN
-		hStackTitel.Add(entryTitel);//NIET VERGETEN
+        hStackTitel.VerticalOptions = LayoutOptions.Center;
+        
+		hStackTitel.Add(new Label()
+        {
+            VerticalTextAlignment = TextAlignment.Center,
+            Text = "Titel: "
+        }); //NIET VERGETEN
+        var entryTitel = new Entry();
+        entryTitel.Placeholder = "Vul hier de titel in";
+        hStackTitel.Add(entryTitel);//NIET VERGETEN
         vStack.Add(hStackTitel);//NIET VERGETEN
 
         var hStackDuurtijd = new HorizontalStackLayout();
-        var lblDuurtijd = new Label();
-        lblDuurtijd.Text = "Duurtijd (in minuten): ";
+        hStackDuurtijd.VerticalOptions = LayoutOptions.Center;
+        hStackDuurtijd.Add(new Label()
+        {
+            VerticalTextAlignment = TextAlignment.Center,
+            Text = "Duurtijd: "
+        }); //NIET VERGETEN
         var entryDuurtijd = new Entry();
         entryDuurtijd.Placeholder = "Duurtijd (in minuten)";
-        hStackDuurtijd.Add(lblDuurtijd); //NIET VERGETEN
         hStackDuurtijd.Add(entryDuurtijd);//NIET VERGETEN
         vStack.Add(hStackDuurtijd);//NIET VERGETEN
 
         var hStackLiveAction = new HorizontalStackLayout();
-        var lblLiveAction = new Label();
-        lblLiveAction.Text = "Live-action: ";
+        hStackLiveAction.VerticalOptions = LayoutOptions.Center;
+        hStackLiveAction.Add(new Label()
+        {
+            VerticalTextAlignment = TextAlignment.Center,
+            Text = "Live-action: "
+        }); //NIET VERGETEN
         var chckLiveAction = new CheckBox();
         chckLiveAction.IsChecked = true;
-        hStackLiveAction.Add(lblLiveAction); //NIET VERGETEN
         hStackLiveAction.Add(chckLiveAction);//NIET VERGETEN
         vStack.Add(hStackLiveAction);//NIET VERGETEN
 
@@ -61,14 +68,22 @@ public class FilmPagina : ContentPage
             entryTitel.Text = "";
             entryDuurtijd.Text = "";
             chckLiveAction.IsChecked = true;
-            vStackFilms.Clear(); 
-            foreach (var film in db.Films)
-            {
-                var lblFilm = new Label();
-                lblFilm.Text = $"{film.Titel} ({film.Duurtijd_minuten} minuten)";
-                vStackFilms.Add(lblFilm);
-            }
+            ShowMovies();
         };
 
+    }
+
+    public void ShowMovies()
+    {
+        vStackFilms.Clear();
+        var films = db.Films.ToList();
+        for(int i = 0; i < films.Count; i++)
+        {
+            var film = films[i];
+            var lblFilm = new Label();
+            lblFilm.BackgroundColor = i % 2 == 0 ? Colors.LightBlue : Colors.LightGreen;
+            lblFilm.Text = $"{film.Titel} ({film.Duurtijd_minuten} minuten)";
+            vStackFilms.Add(lblFilm);
+        }
     }
 }
