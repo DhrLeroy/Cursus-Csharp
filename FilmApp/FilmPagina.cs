@@ -15,7 +15,11 @@ public class FilmPagina : ContentPage
         Content = vStack;//NIET VERGETEN
 
         vStack.Add(vStackFilms);//NIET VERGETEN
-        ShowMovies();
+        foreach (var v in db.Films)
+        {
+            VoegFilmToe(v);
+        }
+        
 
         var hStackTitel = new HorizontalStackLayout();
         hStackTitel.VerticalOptions = LayoutOptions.Center;
@@ -65,25 +69,24 @@ public class FilmPagina : ContentPage
             nieuweFilm.LiveAction = chckLiveAction.IsChecked;
             db.Films.Add(nieuweFilm);
             db.SaveChanges();
+            VoegFilmToe(nieuweFilm);
             entryTitel.Text = "";
             entryDuurtijd.Text = "";
             chckLiveAction.IsChecked = true;
-            ShowMovies();
+            
         };
 
     }
 
-    public void ShowMovies()
+    public void VoegFilmToe(Film film)
     {
-        vStackFilms.Clear();
-        var films = db.Films.ToList();
-        for(int i = 0; i < films.Count; i++)
+        var btnFilm = new Button();
+        btnFilm.Text = $"{film.Titel}";
+        vStackFilms.Add(btnFilm);
+        btnFilm.Clicked += (s, e) =>
         {
-            var film = films[i];
-            var lblFilm = new Label();
-            lblFilm.BackgroundColor = i % 2 == 0 ? Colors.LightBlue : Colors.LightGreen;
-            lblFilm.Text = $"{film.Titel} ({film.Duurtijd_minuten} minuten)";
-            vStackFilms.Add(lblFilm);
-        }
+            AppShell.Current.GoToAsync("filmDetail", 
+                new Dictionary<string, object> { { "film", film} });
+        };
     }
 }

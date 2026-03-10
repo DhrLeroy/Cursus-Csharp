@@ -4,12 +4,8 @@ public class VideogameAanmaken : ContentPage
 {
 	public VideogameAanmaken()
 	{
-		Content = new VerticalStackLayout
-		{
-			Children = {
-				new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to .NET MAUI!"
-				}
-			}
-		};
+		var vstack = new VerticalStackLayout();
+
+
 	}
 }
