@@ -83,10 +83,11 @@ public class FilmPagina : ContentPage
         var btnFilm = new Button();
         btnFilm.Text = $"{film.Titel}";
         vStackFilms.Add(btnFilm);
-        btnFilm.Clicked += (s, e) =>
+        btnFilm.Clicked += async (s, e) =>
         {
-            AppShell.Current.GoToAsync("filmDetail", 
-                new Dictionary<string, object> { { "film", film} });
+            /*AppShell.Current.GoToAsync("filmDetail", 
+                new Dictionary<string, object> { { "film", film} });*/
+            await Navigation.PushAsync(new FilmDetail(film));
         };
     }
 }

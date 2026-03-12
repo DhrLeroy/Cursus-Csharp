@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            Routing.RegisterRoute("filmDetail", typeof(FilmDetail));
+            //Routing.RegisterRoute("filmDetail", typeof(FilmDetail));
         }
     }
 }

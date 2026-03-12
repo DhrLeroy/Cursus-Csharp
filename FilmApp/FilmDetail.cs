@@ -2,31 +2,24 @@ using FilmApp_klassen;
 
 namespace FilmApp;
 
-[QueryProperty(nameof(FilmDisplay), "film")]
+//[QueryProperty(nameof(FilmDisplay), "film")]
 public class FilmDetail : ContentPage
 {
-    private Film _filmDisplay;
+    /*private Film _filmDisplay;
 
     public Film FilmDisplay
     {
         get { return _filmDisplay; }
         set {
             _filmDisplay = value; }
-    }
+    }*/
 
-	public FilmDetail()
+	public FilmDetail(Film FilmDisplay)
 	{
-        Console.WriteLine();
-    }
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-
         var vStack = new VerticalStackLayout();
 
         Content = vStack;
+
 
         var lblTitel = new Label();
         lblTitel.Text = $"Titel: {FilmDisplay.Titel}";
@@ -39,5 +32,13 @@ public class FilmDetail : ContentPage
         var lblLiveAction = new Label();
         lblLiveAction.Text = $"Live-action: {(FilmDisplay.LiveAction ? "ja" : "nee")}";
         vStack.Add(lblLiveAction);
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+
+        
     }
 }
