@@ -15,6 +15,9 @@ namespace EersteWebsite.Pages
             Game = db.Videogames.Find(id);
         }
 
+        [BindProperty]
+        public Test Test { get; set; }
+
         public IActionResult OnPost() { 
             var db = new Connectie();
             db.Videogames.Remove(Game);
