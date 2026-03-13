@@ -1,0 +1,9 @@
+﻿@page
+@model EersteWebsite.Pages.VerwijderenModel
+@{
+    <form method="post">
+        <p>Ben je zeker dat je @Model.Game.Titel wilt verwijderen?</p>
+        <input type="submit" value="Ja"/><a asp-page="/Detail" asp-route-id="@Model.Game.Id">Nee</a>
+    </form>
+    
+}

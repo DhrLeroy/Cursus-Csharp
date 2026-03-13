@@ -3,6 +3,12 @@
 @{
 }
 
-<p>Titel: @Model.Game.Titel</p>
-<p>Genre: @Model.Game.Genre</p>
-<p>Studio: @Model.Game.Studio</p>
+<form method="post">
+    <input asp-for="@Model.Game.Id" type="hidden" />
+    <p>Titel: <input asp-for="@Model.Game.Titel" /></p>
+    <p>Genre: <input asp-for="@Model.Game.Genre" /></p>
+    <p>Studio: <input asp-for="@Model.Game.Studio" /></p>
+    <input type="submit" value="Opslaan"/>
+    <a asp-page="/Verwijderen" asp-route-id="@Model.Game.Id">Verwijderen</a>
+    
+</form>

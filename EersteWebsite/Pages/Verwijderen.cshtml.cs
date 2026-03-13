@@ -5,22 +5,21 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace EersteWebsite.Pages
 {
-    public class DetailModel : PageModel
+    public class VerwijderenModel : PageModel
     {
         [BindProperty]
         public Videogame Game { get; set; }
-        
         public void OnGet(int id)
         {
             var db = new Connectie();
             Game = db.Videogames.Find(id);
         }
 
-        public void OnPost()
-        {
+        public IActionResult OnPost() { 
             var db = new Connectie();
-            db.Attach(Game).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            db.Videogames.Remove(Game);
             db.SaveChanges();
+            return RedirectToPage("Index");
         }
     }
 }
