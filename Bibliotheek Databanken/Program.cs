@@ -15,6 +15,28 @@ while (true)
     var id = Convert.ToInt32(Console.ReadLine());
     if (id == 0)
     {
+        var db = new Connectie();
+
+        Auteur a = db.Auteurs.First(aut => aut.Voornaam == "J.R.R." && aut.Naam == "Tolkien");
+        db.Auteurs.Remove(a);
+
+        db.SaveChanges();
+
+        Console.Write("Id van de auteur: ");
+        var id = Convert.ToInt32(Console.ReadLine());
+        Auteur a = db.Auteurs.First(aut => aut.Id == id);
+        Console.Write("Voornaam: ");
+        a.Voornaam = Console.ReadLine();
+        Console.Write("Naam: ");
+        a.Naam = Console.ReadLine();
+
+        db.SaveChanges();
+
+        foreach (var a in db.Auteurs)
+        {
+            Console.WriteLine($"{a.Voornaam} {a.Naam}");
+        }
+
         Console.Write("Voornaam: ");
         var vn = Console.ReadLine();
         Console.Write("Naam: ");

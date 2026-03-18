@@ -46,7 +46,7 @@ public class Hoofdpagina : ContentPage
         hoofdStack.Add(btnToevoegen);
         btnToevoegen.Clicked += (s, e) =>
         {
-            Navigation.PushAsync(new PokémonDetails(new Klassen.Pokémon()));
+            Navigation.PushAsync(new PokémonDetails(new Klassen.Pokémon() { Naam = "", Type = ""}));
         };
 
         foreach (var pokemon in pokemons)

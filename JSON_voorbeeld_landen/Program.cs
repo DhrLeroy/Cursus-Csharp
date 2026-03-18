@@ -24,5 +24,6 @@ var landen = jsonLanden.GeefLanden();
 
 foreach(var land in landen)
 {
+    land.Oppervlakte_km2 = 100;
     Console.WriteLine(land.Naam);
 }
