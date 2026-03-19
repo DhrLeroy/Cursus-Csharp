@@ -7,6 +7,14 @@ Maak een console applicatie waarbij je films (titel, hoofdacteur en rating op 10
 Eerst toon je alle opgeslagen films (Titel, starring Hoofdacteur: Rating/10) en vervolgens kan je er een nieuwe toevoegen.
  */
 
+var fruit = new List<string>();
+for(int i = 0; i < 5; i++)
+{
+    fruit.Add(Console.ReadLine());
+}
+var fruit_A = fruit.Single(f => f.StartsWith("a", StringComparison.CurrentCultureIgnoreCase));
+throw new InvalidOperationException("")
+
 while (true)
 {
     Console.WriteLine("Alle films: ");
