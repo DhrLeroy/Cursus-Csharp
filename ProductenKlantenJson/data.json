@@ -1,0 +1,18 @@
+{
+  "Klanten": [
+    {
+      "Naam": "ABC",
+      "Krediet": 100
+    },
+    {
+      "Naam": "DEF",
+      "Krediet": 200
+    }
+  ],
+  "Producten": [
+    {
+      "Naam": "Appel",
+      "Prijs": 2
+    }
+  ]
+}

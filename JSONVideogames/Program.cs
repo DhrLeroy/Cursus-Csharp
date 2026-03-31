@@ -15,7 +15,7 @@ while (true)
 
     foreach(var game in games)
     {
-        Console.WriteLine($"{game.Titel} - {game.Genre} ({game.Duurtijd_minuten} minuten)");
+        Console.WriteLine($"{game.Titel} - {game.Genre} ({game.Lengte} minuten)");
     }
     Console.Write("Wil je een nieuwe game toevoegen? (ja/nee) ");
     if(Console.ReadLine().Equals("ja", StringComparison.CurrentCultureIgnoreCase))
@@ -29,7 +29,7 @@ while (true)
         var game = new Videogame();
         game.Titel = titel;
         game.Genre = genre;
-        game.Duurtijd_minuten = duurtijd;
+        game.Lengte = duurtijd;
         games.Add(game);
         json = JsonSerializer.Serialize(games);
         File.WriteAllText("C:\\Users\\RenaudLeroy\\source\\repos\\DhrLeroy\\Cursus-Csharp\\JSONVideogames\\data.json", json);

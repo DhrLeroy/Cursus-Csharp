@@ -10,6 +10,6 @@ namespace JSONVideogames
     {
         public string Titel { get; set; }
         public string Genre { get; set; }
-        public int Duurtijd_minuten { get; set; }
+        public int Lengte { get; set; }
     }
 }

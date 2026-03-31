@@ -7,7 +7,7 @@ var coefficienten_namen = new string[3] {"a","b","c"};
 
 for (int i = 0; i < coefficienten.Length; i++)
 {
-    while ()
+    while (true)
     {
         try
         {

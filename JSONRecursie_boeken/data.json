@@ -1,0 +1,21 @@
+{
+  "$id": "1",
+  "Titel": "Project Hail Mary",
+  "Auteurs": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "Naam": "Andy Weir",
+        "Boeken": {
+          "$id": "4",
+          "$values": [
+            {
+              "$ref": "1"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

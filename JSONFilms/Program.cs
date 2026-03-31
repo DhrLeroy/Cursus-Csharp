@@ -13,7 +13,7 @@ for(int i = 0; i < 5; i++)
     fruit.Add(Console.ReadLine());
 }
 var fruit_A = fruit.Single(f => f.StartsWith("a", StringComparison.CurrentCultureIgnoreCase));
-throw new InvalidOperationException("")
+throw new InvalidOperationException("");
 
 while (true)
 {
