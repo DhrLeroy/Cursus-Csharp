@@ -3,6 +3,10 @@ using System.Globalization;
 
 var db = new Connectie();
 
+db.Strips.Where(s => s.Jaar_druk < 2000).Select(s => s.Prijs);
+
+var sql = "Select prijs from tbl.strips where Jaar_druk < 2000";
+
 while (true)
 {
     Console.Write("Wat wil je beheren? (S = Strips, A = Albums, T = Tekenaars) ");
