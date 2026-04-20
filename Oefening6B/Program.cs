@@ -47,6 +47,54 @@ List<Achievement> achievements = games.SelectMany(game => game.Achievements).ToL
 //lijst van games met meerdere speelbare personages
 
 
+//lijst van ontwikkelaars die games in het Pools hebben uitgebracht
+
+
+//de gemiddelde leeftijd van alle personages
+
+
+//lijst van alle games, gesorteerd eerst op genre en dan op beoordeling.
+
+
+//de gemiddelde leeftijd van alle personages in games van Bethesda Game Studios
+
+
+//de gemiddelde leeftijd van alle helden (rol = "Held")
+
+
+//het spel met het grootste verschil in leeftijd tussen de helden en de slechteriken (enkel als die er zijn)
+
+
+//geef alle talen die voorkomen in games (zonder duplicaten).
+
+
+//toon van alle games de ratio van de geheime en niet geheime achievements (bv.: 60% geheim, 40% niet geheim)
+
+
+//toon de titels van de top 3 best beoordeelde games
+
+
+//toon de langste game per ontwikkelaar
+
+
+//toon alle games met minstens één achievement van moeilijkheidsgraad 5
+
+
+//sorteer alle games op rating (hoog naar laag), vervolgens op aantal achievements (hoog naar laag) en tenslotte op aantal personages (van laag naar hoog)
+
+
+
+//Groepeer games per genre en toon per genre (toon het genre) de titels van de games na elkaar
+
+
+//Geef per genre de gemiddelde beoordeling, gesorteerd van hoog naar laag.
+
+
+//Geef de namen van alle speelbare personages uit games met een beoordeling > 9, gesorteerd op leeftijd.
+
+
+//Geef per ontwikkelaar het totaal aantal achievements van al hun games, gesorteerd van hoog naar laag.
+
 
 Console.WriteLine();
 Console.WriteLine();

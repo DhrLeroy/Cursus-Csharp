@@ -29,7 +29,7 @@ namespace LINQ_Games.Klassen
             var ontwikkelaars = new List<Ontwikkelaar> { rockstar, naughtyDog, nintendo, cdProjekt, bethesda, valve };
 
             var rdr2 = new Game("Red Dead Redemption 2", "Action-Adventure", TimeSpan.FromHours(60), new DateTime(2018, 10, 26), "PlayStation", 9.7, "Red Dead", new[] { "Engels" });
-            rdr2.VoegPersonageToe(new Personage("Arthur Morgan", "Held", "Outlaw en hoofdpersoon van het verhaal.", 36, "Sharpshooter", true));
+            rdr2.VoegPersonageToe(new Personage("Arthur Morgan", "Held", "Held", 36, "Sharpshooter", true));
             rdr2.VoegPersonageToe(new Personage("Dutch van der Linde", "Slechterik", "Leider van de Van der Linde gang.", 40, "Leiderschap", false));
             rdr2.VoegPersonageToe(new Personage("Sadie Adler", "NPC", "Wraakzuchtige weduwe en bondgenoot.", 30, "Wraak", false));
             rdr2.VoegAchievementToe(new Achievement("Lending a Hand", "Voltooi alle optionele missies.", 5, false));
