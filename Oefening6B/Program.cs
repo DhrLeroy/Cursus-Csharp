@@ -96,5 +96,17 @@ List<Achievement> achievements = games.SelectMany(game => game.Achievements).ToL
 //Geef per ontwikkelaar het totaal aantal achievements van al hun games, gesorteerd van hoog naar laag.
 
 
+//Geef alle genres die voorkomen in games met een beoordeling > 8, zonder duplicaten, alfabetisch.
+
+
+//Geef per franchise het gemiddelde van de speeltijd (in uren).
+
+
+//Geef de top 3 beste games (geen gedeelde plaatsen o.b.v. beoordeling), gesorteerd op beoordeling van hoog naar laag
+
+
+//Geef de top 3 beste games (met gedeelde plaatsen o.b.v. beoordeling), gesorteerd op beoordeling van hoog naar laag
+
+
 Console.WriteLine();
 Console.WriteLine();
