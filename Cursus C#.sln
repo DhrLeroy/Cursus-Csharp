@@ -967,6 +967,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uitleg LINQ Campus Impuls",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voorbeeld6D", "Voorbeeld6D\Voorbeeld6D.csproj", "{CE276C03-13DB-4997-B85B-5D78023A1046}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voorbeeld6D_Oplossing", "Voorbeeld6D_Oplossing\Voorbeeld6D_Oplossing.csproj", "{AE2BBEB2-DC22-49C3-B5A8-DF7A85721C2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -2186,6 +2188,10 @@ Global
 		{CE276C03-13DB-4997-B85B-5D78023A1046}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE276C03-13DB-4997-B85B-5D78023A1046}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE276C03-13DB-4997-B85B-5D78023A1046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE2BBEB2-DC22-49C3-B5A8-DF7A85721C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2BBEB2-DC22-49C3-B5A8-DF7A85721C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2BBEB2-DC22-49C3-B5A8-DF7A85721C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2BBEB2-DC22-49C3-B5A8-DF7A85721C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2670,6 +2676,7 @@ Global
 		{24BD62D3-44B2-4E46-BB57-8A4873A310F7} = {40881239-294A-4E0C-B6EA-53005CA6195F}
 		{4362B626-2FC3-4D67-BE85-DF63BB2E059F} = {24BD62D3-44B2-4E46-BB57-8A4873A310F7}
 		{CE276C03-13DB-4997-B85B-5D78023A1046} = {5A03192C-4DA1-41E3-BD80-0421D98B4022}
+		{AE2BBEB2-DC22-49C3-B5A8-DF7A85721C2D} = {5A03192C-4DA1-41E3-BD80-0421D98B4022}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}
