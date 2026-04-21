@@ -108,5 +108,14 @@ List<Achievement> achievements = games.SelectMany(game => game.Achievements).ToL
 //Geef de top 3 beste games (met gedeelde plaatsen o.b.v. beoordeling), gesorteerd op beoordeling van hoog naar laag
 
 
+//Groepeer de games per platform en toon in welke talen er allemaal games worden aangeboden
+
+
+//Groepeer de games per genre en toon per genre de laagste en hoogste beoordeling van een game in dit genre.
+
+
+//Groepeer de personages per leeftijdcategorie (0-10, 11-20, 21-30, ...) en toon per leeftijdscategorie de namen 'Helden'.
+
+
 Console.WriteLine();
 Console.WriteLine();
