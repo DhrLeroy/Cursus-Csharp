@@ -43,4 +43,25 @@ List<Reeks> filmReeksen = Data.GetData();
 // rollen met maar 1 naam (zonder voor- of achternaam)
 
 
-// filmrollen die
+// bestaan er acteurs waarvan de voornaam korter is dan 3 letters?
+
+
+// zijn alle films in de 19e eeuw uitgekomen?
+
+
+// toon per reeks de titels van de films
+
+
+// toon alle films gesorteerd eerst volgens releasejaar (klein naar groot), en vervolgens alfabetisch op titel
+
+
+// toon alle film van met Hugo Weaving (acteur)
+
+
+// toon alle films van Peter Jackson (regisseur)
+
+
+// toon alle films van Peter Jackson met Hugo Weaving
+
+
+// toon alle rollen van The Hobbit, met per rol de verschillende acteurs die die rol hebben vertolkt
