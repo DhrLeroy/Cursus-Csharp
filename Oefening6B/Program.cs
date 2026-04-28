@@ -17,19 +17,19 @@ List<Personage> personages = ontwikkelaars
 List<Achievement> achievements = games.SelectMany(game => game.Achievements).ToList();
 
 //lijst van de titels van alle games
-
+var Titel_Alle_Games = games.SelectMany(game => game.Titel);
 
 //lijst van alle personages in een 'Adventure' game
-
+var Personages_Adventure_Games = games.Where(g => g.Genre.Equals("adventure", StringComparison.CurrentCultureIgnoreCase)).SelectMany(p => p.Personages).ToList();
 
 //lijst van ontwikkelaars met games met een beoordeling van minstens 9 (op 10)
-
+var Ontwikkelaar_Games_Score_Min_9 = ontwikkelaars.Select(o => o.Games.Where(g => g.Beoordeling >= 9f)).ToList();
 
 //lijst van games met een slechterik (rol = "Slechterik")
-
+var Games_Slechterik = games.Select(g => g.Personages.Where(p => p.Rol.Contains("Slechterik", StringComparison.CurrentCultureIgnoreCase))).ToList();
 
 //lijst van alle achievements van games van Rockstar Games
-
+var RockStar_Achievements = ontwikkelaars.Where(o => o.Naam.Equals(Rockstar Games, StringComparison.CurrentCultureIgnoreCase);
 
 //lijst van alle achievements met een moeilijkheidsgraad van minstens 4
 
@@ -69,7 +69,14 @@ List<Achievement> achievements = games.SelectMany(game => game.Achievements).ToL
 
 
 //toon van alle games de ratio van de geheime en niet geheime achievements (bv.: 60% geheim, 40% niet geheim)
+var ratios = games.Select(g =>
+{
+    var aantal_geheim = g.Achievements.Where(a => a.IsGeheim);
 
+
+    var str = "";
+    return str;
+}).ToList();
 
 //toon de titels van de top 3 best beoordeelde games
 

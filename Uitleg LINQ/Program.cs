@@ -4,16 +4,37 @@ using Uitleg_LINQ;
 List<Pokémon> pokemons = new List<Pokémon>(){
      new Pokémon("Bulbasaur", 45, "grass", 0.7,6.9),
     new Pokémon("Charmander", 39, "fire", 0.6,8.5),
+    new Pokémon("Charmeleon", 65, "fire", 1.6,15),
     new Pokémon("Squirtle", 44, "water", 0.5, 9),
     new Pokémon("Magikarp", 20, "water", 0.9, 10)
 };
 
 var db = new Connectie();
 
+
+//SELECT = transformatie van het ene type naar het andere
+
+//Klasse Pokémon => string
+var namen = pokemons.Select(p => p.Naam).ToList();
+
+
+//Klasse Pokémon => float
+var hoogtes = pokemons.Select(p => p.Hoogte).ToList();
+
+
+
+//WHERE = filteren van items
+
+var pokemons_groter_dan_50cm = pokemons.Where(p => p.Hoogte > 0.5).ToList();
+
+var waterpokemons = db.Pokémons.Where(p => p.Type.ToLower() == "water").ToList();
+
+
 //SUM = tel alle getallen bij elkaar op
 
 //geef het totaalgewicht van alle Pokémons
 var totaal = db.Pokémons.Sum(e => e.Gewicht);
+totaal = db.Pokémons.Select(p => p.Gewicht).Sum();
 
 //geef het totaalhoogte van alle Pokémons
 var totaalVolume = db.Pokémons.Sum(p => p.Hoogte);
@@ -71,11 +92,15 @@ var aantalPokémons = db.Pokémons.Count();
 //bereken het aantal Water-Pokémons
 var aantalWaterPokémons = db.Pokémons.Where(e => e.Type == "water").Count();
 
+//hoeveel unieke beginletters zijn er in de namen van Pokémon
+var aantalUniekeBeginletters = db.Pokémons.Select(p => p.Naam.Substring(0,1).ToUpper()).Distinct().Count();
+
 
 //ANY = geeft weer of minstens één element aan een voorwaarde voldoet
 
 // bestaan er water Pokémons?
 var bestaanErWaterPokémons = db.Pokémons.Any(e => e.Type == "water");
+bestaanErWaterPokémons = db.Pokémons.Where(p => p.Type == "water").Count() > 0;
 
 // bestaan er Pokémons met een HP boven 40?
 var bestaanErPokémonsMetHPBoven40 = db.Pokémons.Any(e => e.Base_HP > 40);
@@ -87,6 +112,7 @@ var zijnErPokémonsKleinerDan50cm = db.Pokémons.Any(e => e.Hoogte < 50);
 
 //is elke Pokémon zwaarder dan 8 kg?
 var alleZwaarderDan8kg = db.Pokémons.All(e => e.Gewicht > 8);
+alleZwaarderDan8kg = db.Pokémons.Where(p => p.Gewicht > 8).Count() == db.Pokémons.Count();
 
 //zijn alle Pokémons Water-Pokémons?
 var allemaalWaterPokémons = db.Pokémons.All(e => e.Type == "water");
@@ -105,7 +131,7 @@ nietAllemaalWaterPokémons = db.Pokémons.Where(e => e.Type == "water").Count() 
 var Base_HPs = db.Pokémons.Select(p => p.Base_HP).ToList();
 
 //lijst van unieke BASE HP's
-var unieke_Base_HPs = db.Pokémons.Select(p => p.Base_HP).Distinct().ToList();
+List<int> unieke_Base_HPs = db.Pokémons.Select(p => p.Base_HP).Distinct().ToList();
 
 //lijst van de verschillende gewichten
 var verschillende_gewichten = db.Pokémons.Select(e => e.Gewicht).Distinct().ToList();
@@ -171,7 +197,7 @@ var e = lettersVanMijnNaam.Except(klinkers);
 
 // GROUP BY = Groepeert elementen volgens een bepaalde eigenschap
 
-var gegroepeerd_op_eerste_letter = db.Pokémons.GroupBy(e => e.Naam.Substring(0,1)).ToList();
+var gegroepeerd_op_eerste_letter = pokemons.GroupBy(e => e.Naam.Substring(0,1)).ToList();
 
 foreach(var groep in gegroepeerd_op_eerste_letter)
 {

@@ -1,4 +1,4 @@
-﻿string tekst = "\t\tDeze les is leuk.       ";
+﻿string tekst = "Deze les is leuk.       ";
 
 string tekst_zonder_begineind_spaties = tekst.Trim();
 
@@ -30,8 +30,13 @@ bool eindigt_op_f = tekst.EndsWith("F", StringComparison.CurrentCultureIgnoreCas
 
 bool bevat_CD = tekst.Contains("CD", StringComparison.CurrentCultureIgnoreCase);
 
+Console.Write("Geef een zin in: ");
+var zin = Console.ReadLine();
 
-
+if(zin.EndsWith("."))
+    Console.WriteLine("Goed zo!");
+else
+    Console.WriteLine("Zin moet eindigen op een punt.");
 
 
 

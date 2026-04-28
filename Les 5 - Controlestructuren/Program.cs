@@ -1,5 +1,19 @@
-﻿
+﻿/*List<int> getallen = new List<int>();
 
+while(getallen.Contains(0) == false)
+{
+    Console.Write("Getal: ");
+    var getal = Convert.ToInt32(Console.ReadLine());
+    getallen.Add(getal);
+}*/
+
+int bedrag = 0;
+while(bedrag <= 0)
+{
+    Console.Write("Bedrag: ");
+    bedrag = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine($"Bedrag is {bedrag}");
 
 /*Console.Write("Getal: ");
 
