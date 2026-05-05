@@ -71,12 +71,13 @@ var vandaag = DateTime.Now;
 
 Console.WriteLine(vandaag.ToString("dddd d MMMM yyyy o\\m h:mm:ss"));
 
+if (vandaag.DayOfWeek == DayOfWeek.Sunday || vandaag.DayOfWeek == DayOfWeek.Saturday)
+    Console.WriteLine("Weekend");
+else
+    Console.WriteLine("Werkdag");
 
-
-
-
-
-
+var d = new DateTime(9999, 12, 31, 23, 59, 59);
+d.AddHours(1);
 
 
 
