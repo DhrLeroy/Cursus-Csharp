@@ -41,7 +41,9 @@ while (true)
         Console.Write("Nummer van de serie: ");
         var id = Convert.ToInt32(Console.ReadLine());
         //var serie = db.Series.First(s => s.SerieId == id);
-        var serie = db.Series.Include(s => s.Seizoenen).First(s => s.SerieId == id);
+        var serie = db.Series
+            .Include(s => s.Seizoenen).ThenInclude(s => s.Afleveringen)
+            .First(s => s.SerieId == id);
         Console.WriteLine($"Naam: {serie.Naam}");
         Console.WriteLine($"Beschrijving: {serie.Beschrijving}");
         Console.WriteLine("Seizoenen");
