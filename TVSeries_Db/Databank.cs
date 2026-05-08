@@ -12,6 +12,8 @@ namespace TVSeries_Db
 
             optionsBuilder.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
 
+            //optionsBuilder.UseLazyLoadingProxies();
+
             optionsBuilder.UseMySql("server=localhost;database=tv_series;user=root;password=Peppa123$",
                 new MySqlServerVersion(new Version(8, 4, 0)));
         }
