@@ -12,11 +12,11 @@ foreach(var letter in letters)
 {
     try
     {
-        var fruitnaam = fruit.First(f => f.StartsWith(letter, StringComparison.CurrentCultureIgnoreCase));
+        var fruitnaam = fruit.Single(f => f.StartsWith(letter, StringComparison.CurrentCultureIgnoreCase));
         Console.WriteLine($"{letter}: {fruitnaam}");
     }
     catch (InvalidOperationException)
     {
-        Console.WriteLine($"Er is geen fruitsoort ingegeven, beginnend met {letter}");
+        Console.WriteLine($"Er is geen fruitsoort ingegeven, beginnend met {letter} of teveel");
     }
 }

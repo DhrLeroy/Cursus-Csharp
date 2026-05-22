@@ -54,7 +54,7 @@ var gekozen_dag = new DateTime(j, m, d);
 if(gekozen_dag >= DateTime.Today && gekozen_dag <= DateTime.Today.AddMonths(3))
 {
     var afspraken_dag = afspraken.Where(a => a.Aanvangsuur.Date <= gekozen_dag && a.Aanvangsuur.Add(a.Duur).Date >= gekozen_dag );
-    var afspraken_maandelijks = afspraken.Where(a => a.Aanvangsuur.Day <= gekozen_dag.Day && a.Aanvangsuur.Add(a.Duur).Day >= gekozen_dag.Day && a.Maandelijks);
+    var afspraken_maandelijks = afspraken.Where(a => a.Aanvangsuur.Date < gekozen_dag && a.Aanvangsuur.Day <= gekozen_dag.Day && a.Aanvangsuur.Add(a.Duur).Day >= gekozen_dag.Day && a.Maandelijks);
     var afspraken_wekelijks = afspraken.Where(a => a.Aanvangsuur.Date <= gekozen_dag.Date && a.Aanvangsuur.Add(a.Duur).Date >= gekozen_dag.Date && a.Aanvangsuur.DayOfWeek == gekozen_dag.DayOfWeek && a.Wekelijks);
     var afspraken_dagelijks = afspraken.Where(a => a.Aanvangsuur.Date <= gekozen_dag && a.Dagelijks);
     var alle_afspraken = afspraken_dag.Union(afspraken_maandelijks).Union(afspraken_wekelijks).Union(afspraken_dagelijks)

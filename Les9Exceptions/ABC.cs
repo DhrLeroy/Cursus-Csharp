@@ -9,14 +9,14 @@ namespace Les9Exceptions
     public class A
 	{
         public void Do() {
-            //try
-            //{
+            try
+            {
                 new B().Do();
-            //}
-            //catch
-            //{
-            //    Console.WriteLine("Er is iets foutgelopen in klasse A.");
-            //}
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Er is iets foutgelopen in klasse A.");
+            }
             
         }
  	}

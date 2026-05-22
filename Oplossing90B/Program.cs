@@ -4,7 +4,7 @@ while (true)
     try
     {
         Console.Write("Gewicht (kg): ");
-        var g = Convert.ToSingle(Console.ReadLine());
+        var g = Convert.ToInt32(Console.ReadLine());
         if (g > 400)
             throw new Exception("Gewicht kan niet groter zijn dan 400 kg.");
         if (g < 0)
