@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37012.4
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les 1 - Variabelen, input en output", "Les 1 - Variabelen, input en output\Les 1 - Variabelen, input en output.csproj", "{10AD0875-81FC-4EAC-A37D-F8360C7D07BB}"
 EndProject
@@ -1046,6 +1046,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening9D", "Oefening9D\Oefening9D.csproj", "{E9FD500F-38AC-4B12-8028-9EC99E0A8787}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oplossing9D", "Oplossing9D\Oplossing9D.csproj", "{1D6A2DA3-3E62-464D-82DE-71B13B6FAD32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extra oefeningen - Vluchten", "Extra oefeningen - Vluchten", "{DC44F682-652C-424D-89EB-37D23B40ADDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ_Vluchten", "LINQ_Vluchten\LINQ_Vluchten.csproj", "{19B00378-CF3D-4ECF-9072-DFB9EC23FF50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -2374,6 +2378,10 @@ Global
 		{1D6A2DA3-3E62-464D-82DE-71B13B6FAD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6A2DA3-3E62-464D-82DE-71B13B6FAD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6A2DA3-3E62-464D-82DE-71B13B6FAD32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B00378-CF3D-4ECF-9072-DFB9EC23FF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B00378-CF3D-4ECF-9072-DFB9EC23FF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B00378-CF3D-4ECF-9072-DFB9EC23FF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B00378-CF3D-4ECF-9072-DFB9EC23FF50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2897,6 +2905,8 @@ Global
 		{60D8E647-1A55-4C5B-961A-65E1EA2C7A1D} = {3B57AE7A-EEE5-47FA-98C8-600EE02E1AD0}
 		{E9FD500F-38AC-4B12-8028-9EC99E0A8787} = {6770D845-6545-4FFD-8528-C997EC21A1A8}
 		{1D6A2DA3-3E62-464D-82DE-71B13B6FAD32} = {6770D845-6545-4FFD-8528-C997EC21A1A8}
+		{DC44F682-652C-424D-89EB-37D23B40ADDE} = {FBF5A338-9193-4680-90D2-88096739C023}
+		{19B00378-CF3D-4ECF-9072-DFB9EC23FF50} = {DC44F682-652C-424D-89EB-37D23B40ADDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}
