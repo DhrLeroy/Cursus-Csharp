@@ -2,6 +2,7 @@
 
 var vluchten = Data.GeefVluchten();
 
+
 // LINQ-opdrachten:
 
 
@@ -149,4 +150,27 @@ var vluchten = Data.GeefVluchten();
 // 43. Groepeer de vluchten op volledige dag (maandag, dinsdag, woensdag, ...) van de vertrekdatum
 
 
-Console.WriteLine();
+// Oefeningen met meerdere LINQ-methoden:
+
+// 44. Alle vluchten van Brussels Airport (BRU) gesorteerd op vertrekdatum (vroegste eerst)
+
+
+// 45. Alle vluchten van Brussels Airport (BRU) naar Schiphol (AMS) gesorteerd op vertrekdatum (vroegste eerst)
+
+
+// 46. Alle vluchten van Brussels Airport (BRU) naar Schiphol (AMS) met een reisduur langer dan 3 uur gesorteerd op aantal passagiers
+
+
+// 47. De gemiddelde duur van alle vluchten van Brussels Airport (BRU)
+
+
+// 48. Hebben alle luchthavens minstens één vlucht met een duur van minstens 2 uur?
+
+
+// 49. Heeft elke vlucht minstens één passagier die een e-mailadres heeft dat eindigt op outlook.com?
+
+
+// 50. Selecteer dan namen (voornaam naam) van alle Business Class passagiers van alle vluchten van Brussels Airport (BRU) in de maand augustus, gesorteerd op naam (A-Z)
+
+
+// 51. De langste vlucht met minstens 10 First Class passagiers
