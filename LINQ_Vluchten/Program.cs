@@ -86,7 +86,7 @@ var vluchten = Data.GeefVluchten();
 
 // Oefening op Concat, Union, Intersect, Except:
 
-// 24. Alle vluchten van Brussels Airport (BRU) en Schiphol (AMS)
+// 24. Alle vluchten van Brussels Airport (BRU) naar Schiphol (AMS)
 
 
 // 25. Alle vluchten van Brussels Airport (BRU) of Schiphol (AMS) (zonder duplicaten)

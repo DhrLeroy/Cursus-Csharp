@@ -1073,6 +1073,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaInterfaces", "PizzaInt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaControllers", "PizzaControllers\PizzaControllers.csproj", "{A72E790C-047C-45BB-8B49-969C058278BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ_Vluchten_oplossing", "LINQ_Vluchten_oplossing\LINQ_Vluchten_oplossing.csproj", "{D1FC5EAA-8107-44DC-AC6B-2446711EC791}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -2428,6 +2430,10 @@ Global
 		{A72E790C-047C-45BB-8B49-969C058278BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A72E790C-047C-45BB-8B49-969C058278BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A72E790C-047C-45BB-8B49-969C058278BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1FC5EAA-8107-44DC-AC6B-2446711EC791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1FC5EAA-8107-44DC-AC6B-2446711EC791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1FC5EAA-8107-44DC-AC6B-2446711EC791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1FC5EAA-8107-44DC-AC6B-2446711EC791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -2964,6 +2970,7 @@ Global
 		{12CF50C8-5FE1-4555-8129-12A81B489DA2} = {8732D0E6-5747-497B-99EE-E8659CEA7096}
 		{B5C5BF35-4741-4A0A-BDB3-3313BF7A0EB5} = {7BE33A9C-DB13-46BC-B245-E43C89DE2DC6}
 		{A72E790C-047C-45BB-8B49-969C058278BD} = {7BE33A9C-DB13-46BC-B245-E43C89DE2DC6}
+		{D1FC5EAA-8107-44DC-AC6B-2446711EC791} = {DC44F682-652C-424D-89EB-37D23B40ADDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2FD29C-CE7A-4662-BDAA-FB96C6ED8FCE}
