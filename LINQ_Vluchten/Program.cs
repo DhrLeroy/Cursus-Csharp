@@ -2,6 +2,20 @@
 
 var vluchten = Data.GeefVluchten();
 
+var data = "var luchthavens = new List<Luchthaven>();";
+
+var alleLuchthavens = vluchten.Select(v => v.Van).Concat(vluchten.Select(v => v.Naar)).GroupBy(l => l.Afkorting).Select(g => g.First()).ToList();
+
+
+
+data += string.Join("", alleLuchthavens.Select(l => $"var {l.Afkorting} = new Luchthaven(\"{l.Naam})\",\"{l.Afkorting}\",\"{l.Land}\",{l.HoogteZeeniveau});\n"));
+
+data += "var vluchten = new List<Vlucht>();";
+
+data += string.Join("\n", vluchten.Select(v => $"vluchten.Add(new Vlucht(\"{v.Naam}\",\"{v.Code}\",\"{v.Maatschappij}\",{v.Van.Afkorting},{v.Naar.Afkorting},DateTime.Parse(\"{v.Datum.ToString()}\"),TimeSpan.Parse(\"{v.Duurtijd.ToString()}\"), new List<Passagier>(){{{string.Join(",\n", v.Passagiers.Select(p => $"new Passagier(\"{p.Naam}\",\"{p.Voornaam}\",\"{p.Emailadres}\",{p.RijNummer},\"{p.StoelNummer}\",\"{p.SoortTicket}\")"))}}}));"));
+
+
+Console.WriteLine();
 
 // LINQ-opdrachten:
 
