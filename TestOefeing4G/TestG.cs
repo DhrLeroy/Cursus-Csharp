@@ -4,7 +4,7 @@ using TestHelper;
 namespace TestOefeing4G
 {
     [TestClass]
-    public sealed class Test4G
+    public sealed class TestG
     {
         [TestMethod]
         public void Testappel_lepel_negen_acht()
