@@ -20,4 +20,4 @@ wedstrijd1.VerhoogScore(true);
 wedstrijd1.VerhoogScore(false);
 wedstrijd1.VerhoogScore(true);
 
-wedtrijd1
+wedstrijd1.ToonUitslag();
